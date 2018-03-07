@@ -30,7 +30,7 @@ function renderTime() {
     d = "0" + d;
   }
 
-  document.querySelector(".budget__title--month").textContent = "" + mon + "/" + d + "/" + y + " " + h + ":" + min + ":" + s + " " + diem;
+  document.querySelector(".budget__title--month").textContent = "" + mon + "/" + d + "/" + y + " " + h + ":" + min + ":" + s + diem;
   setTimeout('renderTime()', 1000);
 }
 renderTime();
