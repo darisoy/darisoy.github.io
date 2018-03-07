@@ -34,14 +34,3 @@ function renderTime() {
   setTimeout('renderTime()', 1000);
 }
 renderTime();
-alert("This online portfolio is under production and is not yet done.");
-
-// var txtFile = "/logs.txt";
-// var file = new File(txtFile);
-// var str = "Hope this will work";
-//
-// file.open("w");
-// file.writeln("Test test test: this is the first line of text");
-// file.writeln("Second line " + str);
-// file.writeln("str");
-// file.close();
