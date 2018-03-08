@@ -30,7 +30,28 @@ function renderTime() {
     d = "0" + d;
   }
 
-  document.querySelector(".budget__title--month").textContent = "" + mon + "/" + d + "/" + y + " " + h + ":" + min + ":" + s + diem;
+  document.querySelector(".budget__title--month").textContent = "" + mon + "/" + d + "/" + y + " " + h + ":" + min + ":" + s  + diem;
   setTimeout('renderTime()', 1000);
 }
 renderTime();
+intro();
+
+function intro() {
+  document.querySelector(".links").insertAdjacentHTML('beforeend', '<div id="div1"><li><span><a href="./Portfolio/DorukArisoyResume.pdf" target="_blank">resume</a></span></li><li><span><a href="https://www.linkedin.com/in/dorukarisoy/" target="_blank">linkedin</a></span></li><li><span><a class="projects">projects ></a></span></li><li><span><a href="./Portfolio/DorukArisoyNetworkingPortfolio.pdf" target="_blank">cisco portfolio</a></span></li><li><span><a href="mailto:doruk.arisoy@gmail.com">contact</a></span></li></div>');
+  document.querySelector(".logo").style.backgroundImage = "url('Portfolio/logo.jpg')";
+
+  document.querySelector(".projects").addEventListener("click", function() {
+    var element = document.getElementById("div1");
+    element.remove(element);
+    document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a href="./Budgety/index.html">budgeting app</a></span></li><li><span><a href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a>more projects coming soon...</a></span></li><li><span><a class="back">< back</a></span></li></div>');
+    document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects.jpg')";
+
+    document.querySelector(".back").addEventListener("click", function() {
+      var element = document.getElementById("div1");
+      element.remove(element);
+      intro();
+    });
+
+  });
+
+}
