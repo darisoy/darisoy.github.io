@@ -6,10 +6,10 @@
         <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="../Portfolio/icon.ico" />
-        <title>Budgety</title>
+        <title>Budgeting App</title>
     </head>
-    <body>
 
+    <body>
         <div class="top">
             <div class="budget">
                 <div class="budget__title">
@@ -47,7 +47,7 @@
                     </select>
                     <input type="text" class="add__description" placeholder="Add description">
                     <input type="number" class="add__value" placeholder="Value">
-                    <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                    <button onclick="console.log(document.cookie)" class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
                     <!--
                     <a href="index2.html"><button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button></a>
                     -->
@@ -122,8 +122,13 @@
 
 
         </div>
-        <ul id=menu>
+        <ul id=menua>
           <li><a href="../index.html">main menu</a>
+        </ul>
+        <ul id=menub>
+          <a class="popup">project info
+            <span class="popuptext" id="myPopup">This is an app that calculates an individual's monthly budget. You can add and remove income and expenses and see your total budget as well as how much of your income has gone towards a single expense or your total expenses.</span>
+          <!-- <li><a>project info</a> -->
         </ul>
         <script src="app.js"></script>
     </body>
