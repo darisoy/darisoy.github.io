@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="../Portfolio/icon.ico" />
+        <title>Pig Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+            <input type="text" placeholder="Final Score" class="final-score">
+
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+        </div>
+        <ul id=menua>
+          <li><a href="../index.html">main menu</a>
+        </ul>
+        <ul id=menub>
+          <a class="popup">project info
+            <span class="popuptext" id="myPopup">This is a game where there are 2 dice and 2 players and the goal is to get to 100 (default value, this value can be changed by entering a number on to the "Final Score" box). In each turn, the numbers rolled by the player is added to their "current" box. A player can keep rolling the dice until they roll a 1 on either dice. Once they roll a 1, the lose all of their "current" points and it's the next player's turn. They can save their "current" points by clicking "hold". Once they chose to "hold", their "current" points are added to their total points and it's the next player's turn.</span>
+          <!-- <li><a>project info</a> -->
+        </ul>
+        <script src="app.js"></script>
+    </body>
+</html>
