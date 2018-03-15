@@ -168,13 +168,19 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-@keyframes float{
+@keyframes floata{
     0% {top: 90%;}
     50% {top: 91%;}
     100% {top: 90%;}
 }
 
-#menu {
+@keyframes floatb{
+    0% {top: 10%;}
+    50% {top: 9%;}
+    100% {top: 10%;}
+}
+
+#menua {
   position: fixed;
   right: 0;
   top: 90%;
@@ -184,7 +190,23 @@ i {
   font-size: 12px;
   color: white;
   text-decoration: none;
-  animation-name: float;
+  animation-name: floata;
+  animation-duration: 3s;
+  animation-iteration-count:infinite;
+}
+
+
+#menub {
+  position: fixed;
+  right: 1em;
+  top: 10%;
+  width: 8em;
+  margin-top: -2.5em;
+  font-family: "Courier New", Courier, Monaco;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  animation-name: floatb;
   animation-duration: 3s;
   animation-iteration-count:infinite;
 }
@@ -204,6 +226,77 @@ ul {
 
 a:hover {
     background-color: red;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #000000;
+    font-family: "Courier New", Courier, Monaco;
+    font-size: 12px;
+    color: white;
+    color: #fff;
+    text-align: left;
+    border-radius: 0px;
+    padding:  0;
+    position: absolute;
+    z-index: 1;
+    bottom: -2000%;
+    left: 50%;
+    margin-left: -225px;
+    cursor: none;
+}
+
+
+/* Toggle this class - hide and show the popup */
+.popup .show1 {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.popup .show2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup .unshow {
+    visibility: visible;
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
 .winner { background-color: #f7f7f7; }

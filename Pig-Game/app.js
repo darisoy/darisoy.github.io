@@ -106,3 +106,25 @@ function init() {
   document.querySelector('.player-0-panel').classList.add('active');
   document.querySelector(".final-score").value = "";
 }
+
+document.querySelector(".popup").addEventListener("mouseenter", function() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.add("show1");
+    document.getElementById("menub").style.animationPlayState = "paused";
+});
+
+document.querySelector(".popuptext").addEventListener("mouseenter", function() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.remove("unshow");
+  popup.classList.remove("show1");
+  popup.classList.add("show2");
+});
+
+document.querySelector(".popup").addEventListener("mouseleave", function() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.remove("show1");
+    popup.classList.remove("show2");
+    popup.classList.add("unshow");
+    setTimeout(function(){popup.classList.remove("unshow");}, 990);
+    document.getElementById("menub").style.animationPlayState = "running";
+});
