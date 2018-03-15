@@ -57,7 +57,7 @@
   //adds an entry object to the app
   function addValue(entr) {
     //document.cookie = "username=" + entr.description + ";expires=Thu, 18 Dec 2019 12:00:00 UTC;path=/";
-    document.cookie(entr.overID + "=" + "[" + entr.description + ":" + entr.sign + ":" + entr.value + "];");
+    document.cookie = entr.overID + "=" + "[" + entr.description + ":" + entr.sign + ":" + entr.value + "];";
     if (entr.sign == "inc") {
       income += Math.round(parseFloat(entr.value) * 100) / 100;
       calcInc();
