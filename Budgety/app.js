@@ -48,6 +48,8 @@
     var val = document.querySelector(".add__value").value;
     if (des.includes(':') || des.includes('=') || des.includes(';')) {
       alert("ILLEGAL CHARACTER! no ';', ':', or '='");
+    } else if (val < 0) {
+      alert("ILLEGAL VALUE! to enter a negative value, chose negative on the left dropdown");
     } else if (des != "" && val != "") {
       overID++;
       addValue(new Entry(des, document.querySelector(".add__type").value, val, overID));
@@ -124,6 +126,8 @@
     updateExpPer();
     calcPercentage();
     calcAvBudget();
+
+    document.cookie = ID + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
   });
 
   //calculates  and updates available overall budget
