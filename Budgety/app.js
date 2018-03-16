@@ -57,7 +57,7 @@
   //adds an entry object to the app
   function addValue(entr) {
     //document.cookie = "username=" + entr.description + ";expires=Thu, 18 Dec 2019 12:00:00 UTC;path=/";
-    document.cookie = "" + entr.id + ":" + entr.description + ":" + entr.sign + ":" + entr.value;
+    document.cookie = "" + entr.id + " = " + entr.id + ":" + entr.description + ":" + entr.sign + ":" + entr.value;
     if (entr.sign == "inc") {
       income += Math.round(parseFloat(entr.value) * 100) / 100;
       calcInc();
@@ -212,8 +212,9 @@
     if (decodedCookie != "") {
       var ca = decodedCookie.split(';');
       for (var i = 0; i < ca.length; i++) {
-        var decodedCa = decodeURIComponent(ca[i]);
-        var c = decodedCa.split(':');
+        var clean = decodeURIComponent(ca[i]);
+        var cl = clean.split('=');
+        var c = cl[1].split(':');
         addValue(new Entry(c[1], c[2], c[3], c[0]));
       }
     }
