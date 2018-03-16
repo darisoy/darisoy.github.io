@@ -46,7 +46,9 @@
   function typeEntry() {
     var des = document.querySelector(".add__description").value;
     var val = document.querySelector(".add__value").value;
-    if (des != "" && val != "") {
+    if (des.includes(':') || des.includes('=') || des.includes(';')) {
+      alert("ILLEGAL CHARACTER! no ';', ':', or '='");
+    } else if (des != "" && val != "") {
       overID++;
       addValue(new Entry(des, document.querySelector(".add__type").value, val, overID));
       document.querySelector(".add__description").value = "";
@@ -58,6 +60,7 @@
   function addValue(entr) {
     //document.cookie = "username=" + entr.description + ";expires=Thu, 18 Dec 2019 12:00:00 UTC;path=/";
     document.cookie = "" + entr.id + " = " + entr.id + ":" + entr.description + ":" + entr.sign + ":" + entr.value;
+    console.log(document.cookie);
     if (entr.sign == "inc") {
       income += Math.round(parseFloat(entr.value) * 100) / 100;
       calcInc();
@@ -215,6 +218,7 @@
         var clean = decodeURIComponent(ca[i]);
         var cl = clean.split('=');
         var c = cl[1].split(':');
+        console.log(c);
         addValue(new Entry(c[1], c[2], c[3], c[0]));
       }
     }
