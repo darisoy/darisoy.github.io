@@ -108,26 +108,28 @@
         ID = parseInt(splitID[1]);
         var el = document.getElementById(item);
         el.parentNode.removeChild(el);
-    }
-    var value;
-    for (var i = 0; i < valAll.length; i++) {
-      if (valAll[i].id == ID) {
-        value = valAll[i].value;
-        valAll.splice(i, 1);
-      }
-    }
-    if (type == "inc") {
-      income -= value;
-      calcInc();
-    } else {
-      expenses -= value;
-      calcExp();
-    }
-    updateExpPer();
-    calcPercentage();
-    calcAvBudget();
 
-    document.cookie = ID + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        var value;
+        for (var i = 0; i < valAll.length; i++) {
+          if (valAll[i].id == ID) {
+            value = valAll[i].value;
+            valAll.splice(i, 1);
+          }
+        }
+        if (type == "inc") {
+          income -= value;
+          calcInc();
+        } else {
+          expenses -= value;
+          calcExp();
+        }
+        updateExpPer();
+        calcPercentage();
+        calcAvBudget();
+
+        document.cookie = ID + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+
   });
 
   //calculates  and updates available overall budget
