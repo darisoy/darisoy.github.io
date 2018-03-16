@@ -58,7 +58,6 @@
 
   //adds an entry object to the app
   function addValue(entr) {
-    //document.cookie = "username=" + entr.description + ";expires=Thu, 18 Dec 2019 12:00:00 UTC;path=/";
     document.cookie = "" + entr.id + " = " + entr.id + ":" + entr.description + ":" + entr.sign + ":" + entr.value;
     console.log(document.cookie);
     if (entr.sign == "inc") {
@@ -89,7 +88,6 @@
         value = "- " + entr.value;
         value += zeros(entr.value);
         html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
-
     }
     html = html.replace("%id%", entr.id);
     html = html.replace("%description%", entr.description);
