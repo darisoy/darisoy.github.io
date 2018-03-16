@@ -57,7 +57,7 @@
   //adds an entry object to the app
   function addValue(entr) {
     //document.cookie = "username=" + entr.description + ";expires=Thu, 18 Dec 2019 12:00:00 UTC;path=/";
-    document.cookie = "" + entr.id + "=" + "[" + entr.description + ":" + entr.sign + ":" + entr.value + "]";
+    document.cookie = "" + entr.id + ":" + entr.description + ":" + entr.sign + ":" + entr.value;
     if (entr.sign == "inc") {
       income += Math.round(parseFloat(entr.value) * 100) / 100;
       calcInc();
@@ -207,33 +207,15 @@
       document.getElementById("menub").style.animationPlayState = "running";
   });
 
-
-//document.cookie = "username=Johnny TEST;";
-
-  // function getCookie(cname) {
-  //     var name = cname + "=";
-  //     var decodedCookie = decodeURIComponent(document.cookie);
-  //     var ca = decodedCookie.split(';');
-  //     for(var i = 0; i < ca.length; i++) {
-  //         var c = ca[i];
-  //         while (c.charAt(0) == ' ') {
-  //             c = c.substring(1);
-  //         }
-  //         if (c.indexOf(name) == 0) {
-  //             return c.substring(name.length, c.length);
-  //         }
-  //     }
-  //     return "";
-  // }
-  //
-  // function checkCookie() {
-  //     var user=getCookie("username");
-  //     if (user != "") {
-  //         alert("Welcome again " + user);
-  //         console.log(user);
-  //     } else {
-  //       document.cookie = "username=John Doe; expires=Thu, 18 Dec 2019 12:00:00 UTC; path=/";
-  //       console.log("cookie set");
-  //     }
-  // }
+  function checkCookie() {
+    var decodedCookie = decodeURIComponent(document.cookie);
+    if (decodedCookie != "") {
+      var ca = decodedCookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var decodedCa = decodeURIComponent(ca[i]);
+        var c = decodedCa.split(':');
+        addValue(new Entry(c[1], c[2], c[3], c[0]));
+      }
+    }
+  }
 }
