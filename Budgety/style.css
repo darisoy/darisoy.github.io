@@ -33,7 +33,7 @@ body {
 
 .top {
     height: 40vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../Portfolio/background.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -179,6 +179,7 @@ body {
 .container {
     width: 1000px;
     margin: 60px auto;
+
 }
 
 .income {
@@ -358,7 +359,7 @@ a:hover {
     padding:  0;
     position: absolute;
     z-index: 1;
-    bottom: -900%;
+    bottom: -1300%;
     left: 50%;
     margin-left: -225px;
     cursor: none;
