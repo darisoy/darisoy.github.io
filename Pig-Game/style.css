@@ -259,17 +259,11 @@ a:hover {
     cursor: none;
 }
 
-
 /* Toggle this class - hide and show the popup */
 .popup .show1 {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-}
-
-.popup .show2 {
-    visibility: visible;
-    opacity: 1;
 }
 
 .popup .unshow {
