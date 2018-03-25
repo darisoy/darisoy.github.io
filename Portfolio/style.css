@@ -1,27 +1,7 @@
-/**********************************************
-*** GENERAL
-**********************************************/
-.final-score {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 520px;
-    color: #555;
-    font-size: 18px;
-    font-family: 'Lato';
-    text-align: center;
-    padding: 10px;
-    width: 160px;
-    text-transform: uppercase;
-}
-
-.final-score:focus { outline: none; }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 .clearfix::after {
@@ -31,142 +11,197 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
-    background-size: cover;
-    background-position: center;
-    font-family: Lato;
-    font-weight: 300;
+    font-family: "Courier New", Courier, Monaco;
+    font-size: 0.7875em;
     position: relative;
     height: 100vh;
-    color: #555;
+    font-weight: 400;
+    background-image: url("background.jpg");
+    background-color: #000000;
 }
 
-.wrapper {
-    width: 1000px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+.right { float: right; }
+.white { color: #FFFFFF !important; }
+.red-focus:focus { border: 1px solid #FF5049 !important; }
+
+
+element.style {
+    display: block;
+    opacity: 1;
 }
 
-.player-0-panel,
-.player-1-panel {
-    width: 50%;
-    float: left;
-    height: 600px;
-    padding: 100px;
+.home {
+    background:  url("background.jpg");
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-
-
-/**********************************************
-*** PLAYERS
-**********************************************/
-
-.player-name {
-    font-size: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 100;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.home #header {
+    margin: 0 auto 0 auto;
+    margin-top: -4.18182em;
+    z-index: 1000;
+}
+#header {
+    background: transparent;
+    height: 50%;
+    margin: -20.45455em auto 4.09091em;
     position: relative;
-}
-
-.player-score {
     text-align: center;
-    font-size: 80px;
-    font-weight: 100;
-    color: #EB4D4D;
-    margin-bottom: 130px;
+    width: 100%;
 }
 
-.active { background-color: #f7f7f7; }
-.active .player-name { font-weight: 300; }
-
-.active .player-name::after {
-    content: "\2022";
-    font-size: 47px;
+#header hgroup {
     position: absolute;
-    color: #EB4D4D;
-    top: -7px;
-    right: 10px;
-
+    bottom: 0;
+    left: 50%;
+    margin-left: -8.09091em;
+    width: 178px;
+    height: 75px;
 }
 
-.player-current-box {
-    background-color: #EB4D4D;
-    color: #fff;
-    width: 40%;
+#header .logo {
     margin: 0 auto;
-    padding: 12px;
-    text-align: center;
 }
 
-.player-current-label {
-    text-transform: uppercase;
-    margin-bottom: 10px;
+.home .logo {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    display: block;
+    background-position-x: left;
+    background-position-y: top;
+    background-size: auto;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent;
+    background-size: 150px, 45px;
+    width: 150px;
+    height: 45px;
+
+    cursor: none;
+}
+
+.home .logo:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+.home #wrap {
+    height: auto;
+    z-index: 1000;
+}
+#wrap {
+    height: 50em;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 60.54545em;
+}
+
+.home nav {
+    margin: 6.36364em 0 0 25.54545em;
+    overflow: visible;
+    width: 385px;
+}
+
+.home nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 230px;
+    padding-left: 37px;
+}
+
+.home ul {
+    margin: 0;
+    width: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.home li {
+    margin-bottom: 1.36364em;
+}
+
+body.home a {
+    padding: 7px 40px 7px 0;
+}
+.home a {
+    color: white;
+}
+a {
     font-size: 12px;
-    color: #222;
-}
-
-.player-current-score {
-    font-size: 30px;
-}
-
-button {
-    position: absolute;
-    width: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #555;
-    background: none;
-    border: none;
-    font-family: Lato;
-    font-size: 20px;
-    text-transform: uppercase;
+    color: black;
     cursor: pointer;
-    font-weight: 300;
-    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
 }
 
-button:hover { font-weight: 600; }
-button:hover i { margin-right: 20px; }
-
-button:focus {
-    outline: none;
+span:hover {
+    background-color: red;
 }
 
-i {
-    color: #EB4D4D;
+h1 {
+  background-image: url("logo.jpg");
+}
+
+.popup {
+    position: relative;
     display: inline-block;
-    margin-right: 15px;
-    font-size: 32px;
-    line-height: 1;
-    vertical-align: text-top;
-    margin-top: -4px;
-    transition: margin 0.3s;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
 
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
-
-#dice-1 { top: 120px; }
-#dice-2 { top: 250px; }
-
-.dice {
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    background-color: #000000;
+    font-family: "Courier New", Courier, Monaco;
+    font-size: 12px;
+    color: white;
+    color: #fff;
+    text-align: center;
+    width: 280px;
+    height: 30px;
+    border-radius: 0px;
+    padding:  0;
     position: absolute;
-    left: 50%;
-    top: 178px;
-    transform: translateX(-50%);
-    height: 100px;
-    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+    z-index: 1;
+    bottom: -250%;
+    left: -75%;
+    margin-left: 0px;
+    cursor: none;
+    background-image: url("email.jpg");
+    background-size: contain;
 }
 
-.winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
