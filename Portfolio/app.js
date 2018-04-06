@@ -38,7 +38,7 @@
   intro();
 
   function intro() {
-    document.querySelector(".links").insertAdjacentHTML('beforeend', '<div id="div1"><li><span><a href="./Portfolio/DorukArisoyResume.pdf" target="_blank">resume</a></span></li><li><span><a href="https://www.linkedin.com/in/dorukarisoy/" target="_blank">linkedin</a></span></li><li><span><a class="projects">projects ></a></span></li><li><span><a href="./Portfolio/DorukArisoyNetworkingPortfolio.pdf" target="_blank">cisco portfolio</a></span></li><li class="popup"><span><a>contact</a></span><span class="popuptext" id="myPopup"></span></li><li></li><li></li></div>');
+    document.querySelector(".links").insertAdjacentHTML('beforeend', '<div id="div1"><li><span><a href="./Portfolio/DorukArisoyResume.pdf" target="_blank">resume</a></span></li><li><span><a href="https://www.linkedin.com/in/dorukarisoy/" target="_blank">linkedin</a></span></li><li><span><a class="projects">projects ></a></span></li><li><span><a href="./Portfolio/DorukArisoyNetworkingPortfolio.pdf" target="_blank">networking portfolio</a></span></li><li class="popup"><span><a>contact</a></span><span class="popuptext" id="myPopup"></span></li><li></li><li></li></div>');
     document.querySelector(".logo").style.backgroundImage = "url('Portfolio/logo.jpg')";
     document.querySelector(".popup").addEventListener("click", function() {
         console.log("works");
