@@ -48,7 +48,7 @@
     document.querySelector(".projects").addEventListener("click", function() {
       var element = document.getElementById("div1");
       element.remove(element);
-      document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a href="./Budgety/index.html">budgeting app</a></span></li><li><span><a href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a>more projects coming soon...</a></span></li><li><span><a class="back">< back</a></span></li></div>');
+      document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a href="./Budgety/index.html">budgeting app</a></span></li><li><span><a href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a>coming soon...</a></span></li><li><span><a class="back">< back</a></span></li></div>');
       document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects.jpg')";
       document.querySelector(".back").addEventListener("click", function() {
         var element = document.getElementById("div1");
