@@ -61,7 +61,6 @@
   //adds an entry object to the app
   function addValue(entr) {
     document.cookie = "" + entr.id + " = " + entr.id + ":" + entr.description + ":" + entr.sign + ":" + entr.value;
-    console.log(document.cookie);
     if (entr.sign == "inc") {
       income += Math.round(parseFloat(entr.value) * 100) / 100;
       calcInc();
@@ -229,7 +228,6 @@
           overID = parseInt(cl[0]);
         }
         var c = cl[1].split(':');
-        console.log(c);
         addValue(new Entry(c[1], c[2], c[3], c[0]));
       }
     }
