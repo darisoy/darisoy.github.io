@@ -81,6 +81,9 @@ element.style {
     background-color: #000000;
     background-size: contain;
     cursor: none;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
 }
 
 .home .logo:before {
