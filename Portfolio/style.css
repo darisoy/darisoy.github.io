@@ -179,8 +179,8 @@ h1 {
     padding:  0;
     position: absolute;
     z-index: 1;
-    bottom: -250%;
-    left: -75%;
+    bottom: -275%;
+    left: -125%;
     margin-left: 0px;
     cursor: none;
     background-image: url("email.png");
