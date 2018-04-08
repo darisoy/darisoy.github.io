@@ -1,4 +1,14 @@
 {
+  var color;
+  var pics = 6;
+  var num = Math.floor(Math.random() * pics) + 1;
+
+  changeTitle(0);
+  renderTime();
+  intro();
+  colorSelect();
+
+  //calculates date and time and updates it every second
   function renderTime() {
     var now = new Date();
     var diem = "am";
@@ -35,19 +45,27 @@
     setTimeout('renderTime()', 1000);
   }
 
+  //selects a random color and number and sets the logo and popup backgrounds
   function colorSelect() {
     var colors = ["#002b80", "#000000", "#ff0000", "#006600", "#995c00", "#990000", "#990099", "#52527a", "#ff6699"];
     color = colors[Math.floor(Math.random() * colors.length)];
     document.querySelector(".logo").style.backgroundColor = color;
+    num = Math.floor(Math.random() * pics) + 1;
+    var url = document.querySelector(".logo").style.backgroundImage;
+    if (url.includes("logo")) {
+      document.querySelector(".logo").style.backgroundImage = "url('Portfolio/logo/" + num + ".png')";
+      document.getElementById("myPopup").style.backgroundColor = color;
+    } else {
+      document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
+    }
   }
 
+  //enters the links, goes between Doruk and Projects page
   function intro() {
     document.querySelector(".links").insertAdjacentHTML('beforeend', '<div id="div1"><li><span><a href="./Portfolio/DorukArisoyResume.pdf" target="_blank" id="a1">resume</a></span></li><li><span><a id="a2" href="https://www.linkedin.com/in/dorukarisoy/" target="_blank">linkedin</a></span></li><li><span><a id="a3" class="projects">projects ></a></span></li><li><span><a id="a4" href="./Portfolio/DorukArisoyNetworkingPortfolio.pdf" target="_blank">networking portfolio</a></span></li><li class="popup"><span><a id="a5">contact</a></span><span class="popuptext" id="myPopup"></span></li><li></li><li></li></div>');
-    document.querySelector(".logo").style.backgroundImage = "url('Portfolio/logo.png')";
+    document.querySelector(".logo").style.backgroundImage = "url('Portfolio/logo/" + num + ".png')";
     document.querySelector(".popup").addEventListener("click", function() {
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-        popup.style.backgroundColor = color;
+        document.getElementById("myPopup").classList.toggle("show");
     });
     for (var i = 1; i < 6; i++) {
       hover("a" + i);
@@ -56,7 +74,7 @@
       var element = document.getElementById("div1");
       element.remove(element);
       document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a id="a6" href="./Budgety/index.html">budgeting app</a></span></li><li><span><a id="a7" href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a id="a8">more coming soon...</a></span></li><li><span><a id = "a9" class="back">< back</a></span></li></div>');
-      document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects.png')";
+      document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
       for (var i = 6; i < 10; i++) {
         hover("a" + i);
       }
@@ -65,10 +83,10 @@
         element.remove(element);
         intro();
       });
-
     });
   }
 
+  //changes background color of the link when hovered over with a mouse
   function hover(id) {
     document.getElementById(id).addEventListener("mouseenter", function(){
       this.parentNode.style.backgroundColor = color;
@@ -78,14 +96,16 @@
     });
   }
 
+  //changes the color when enter is pressed
   document.addEventListener('keypress', function(event) {
       if (event.keyCode === 13 || event.which === 13) {
           colorSelect();
       }
   });
 
+  //alternates the page title between Doruk and press enter to change color
   function changeTitle(i) {
-    var html = ["Doruk", "press enter", "to change color"];
+    var html = ["Doruk", "Press ENTER", "To Change Color"];
     var sec;
     if (i == 0) {
       sec = 5000;
@@ -98,13 +118,5 @@
       i = 0;
     }
     setTimeout('changeTitle(' + i + ')', sec);
-
   }
-
-  changeTitle(0);
-  renderTime();
-  intro();
-  var color;
-  colorSelect();
-
 }
