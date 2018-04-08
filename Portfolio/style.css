@@ -69,9 +69,8 @@ element.style {
     border: 0;
     overflow: hidden;
     display: block;
-    background-position-x: left;
-    background-position-y: top;
-    background-size: auto;
+    background-position-x: center;
+    background-position-y: center;
     background-repeat-x: no-repeat;
     background-repeat-y: no-repeat;
     background-attachment: initial;
@@ -81,7 +80,8 @@ element.style {
     width: 150px;
     height: 45px;
     background-color: #000000;
-    /*cursor: none;*/
+    background-size: contain;
+    cursor: none;
 }
 
 .home .logo:before {
