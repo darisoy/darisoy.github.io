@@ -58,11 +58,13 @@
     } else {
       document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
     }
+
   }
 
   //enters the links, goes between Doruk and Projects page
   function intro() {
     document.querySelector(".links").insertAdjacentHTML('beforeend', '<div id="div1"><li><span><a href="./Portfolio/DorukArisoyResume.pdf" target="_blank" id="a1">resume</a></span></li><li><span><a id="a2" href="https://www.linkedin.com/in/dorukarisoy/" target="_blank">linkedin</a></span></li><li><span><a id="a3" class="projects">projects ></a></span></li><li><span><a id="a4" href="./Portfolio/DorukArisoyNetworkingPortfolio.pdf" target="_blank">networking portfolio</a></span></li><li class="popup"><span><a id="a5">contact</a></span><span class="popuptext" id="myPopup"></span></li><li></li><li></li></div>');
+    document.getElementById("myPopup").style.backgroundColor = color;
     document.querySelector(".logo").style.backgroundImage = "url('Portfolio/logo/" + num + ".png')";
     document.querySelector(".popup").addEventListener("click", function() {
         document.getElementById("myPopup").classList.toggle("show");
@@ -88,11 +90,22 @@
 
   //changes background color of the link when hovered over with a mouse
   function hover(id) {
-    document.getElementById(id).addEventListener("mouseenter", function(){
-      this.parentNode.style.backgroundColor = color;
+    var url = document.querySelector(".logo").style.backgroundImage;
+    document.getElementById(id).addEventListener("mouseover", function(){
+      document.getElementById(id).style.backgroundColor = color;
+      // document.addEventListener('keypress', function(event) {
+      //   if (event.keyCode === 13 || event.which === 13) {
+      //     document.getElementById(id).style.backgroundColor = color;
+      //   }
+      // });
     });
-    document.getElementById(id).addEventListener("mouseleave", function(){
-      this.parentNode.style.backgroundColor = "transparent";
+    document.getElementById(id).addEventListener("mouseout", function(){
+      document.getElementById(id).style.backgroundColor = "transparent";
+      // document.addEventListener('keypress', function(event) {
+      //   if (event.keyCode === 13 || event.which === 13) {
+      //     document.getElementById(id).style.backgroundColor = "transparent";
+      //   }
+      // });
     });
   }
 
