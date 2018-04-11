@@ -118,7 +118,7 @@
 
   //alternates the page title between Doruk and press enter to change color
   function changeTitle(i) {
-    var html = ["Doruk", "Press ENTER", "To Change Color"];
+    var html = ["Doruk", "Press ENTER", "To Change Theme"];
     var sec;
     if (i == 0) {
       sec = 5000;
