@@ -63,7 +63,7 @@
 
   //enters the links, goes between Doruk and Projects page
   function intro() {
-    document.querySelector(".links").insertAdjacentHTML('beforeend', '<div id="div1"><li><span><a href="./Portfolio/DorukArisoyResume.pdf" target="_blank" id="a1">resume</a></span></li><li><span><a id="a2" href="https://www.linkedin.com/in/dorukarisoy/" target="_blank">linkedin</a></span></li><li><span><a id="a3" class="projects">projects ></a></span></li><li><span><a id="a4" href="./Portfolio/DorukArisoyNetworkingPortfolio.pdf" target="_blank">networking portfolio</a></span></li><li class="popup"><span><a id="a5">contact</a></span><span class="popuptext" id="myPopup"></span></li><li></li><li></li></div>');
+    document.querySelector(".links").insertAdjacentHTML('beforeend', '<div id="div1"><li><span><a href="./Portfolio/DorukArisoyResume.pdf" target="_blank" id="a1">resume</a></span></li><li><span><a id="a2" href="https://www.linkedin.com/in/dorukarisoy/" target="_blank">linkedin</a></span></li><li><span><a id="a3" class="projects">projects ></a></span></li><li><span><a id="a4" href="./Portfolio/DorukArisoyNetworkingPortfolio.pdf" target="_blank">networking portfolio</a></span></li><li class="popup"><span><a id="a5">contact</a></span><span class="popuptext" id="myPopup"></span></li></div>');
     document.getElementById("myPopup").style.backgroundColor = color;
     document.querySelector(".logo").style.backgroundImage = "url('Portfolio/logo/" + num + ".png')";
     document.querySelector(".popup").addEventListener("click", function() {
@@ -76,6 +76,7 @@
       var element = document.getElementById("div1");
       element.remove(element);
       document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a id="a6" href="./Budgety/index.html">budgeting app</a></span></li><li><span><a id="a7" href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a id="a8">more coming soon...</a></span></li><li><span><a id = "a9" class="back">< back</a></span></li></div>');
+      //document.getElementById("a8").addEventListener("click", colorSelect());
       document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
       for (var i = 6; i < 10; i++) {
         hover("a" + i);
