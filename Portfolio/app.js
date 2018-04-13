@@ -2,7 +2,9 @@
   var color;
   var pics = 6;
   var num = Math.floor(Math.random() * pics) + 1;
+  var s = 1;
 
+  skills();
   changeTitle(0);
   renderTime();
   intro();
@@ -132,5 +134,55 @@
       i = 0;
     }
     setTimeout('changeTitle(' + i + ')', sec);
+  }
+
+  //displays skills on the background, selects the random skill and location
+  function skills() {
+    var word = ['java programming', 'data structures', 'algorithms', 'javascript', 'hmtl 5', 'css', 'cisco-certified engineer', 'virtualization', 'linux', 'windows', 'mac os', 'data center operations', 'labview programming', 'english', 'spanish', 'turkish'];
+    var x = (Math.random() * 80) + 10;
+    var y = (Math.random() * 80) + 10;
+    document.querySelector(".skills").insertAdjacentHTML('beforeend', '<h2 class=\'s' + s + '\'>' + word[Math.floor(Math.random() * word.length)] + '</h2>');
+    animate(x, y, '.s' + s);
+    s++;
+    if (s > 10) {
+      s = 1;
+    }
+    setTimeout('skills()', ((Math.random() * 10) + 1) * 500);
+  }
+
+  //animates a word in the background, moves it up and makes it disappear
+  function animate(x, y, s) {
+    var y1 = y;
+    var o = 0.2;
+    var id2;
+    var elem = document.querySelector(s);
+    //elem.style.color = color;
+    elem.style.fontSize = (Math.random() * 18) + 10 + 'px';
+    var id1 = setInterval(frame1, 1);
+    function frame1() {
+      if (o > 0.6) {
+        clearInterval(id1);
+        id2 = setInterval(frame2, 5)
+      } else {
+        o += 0.01
+        elem.style.opacity = o;
+      }
+    }
+    function frame2() {
+        if (y1 < y - 8) {
+            clearInterval(id2);
+        } else {
+          if (y1 < y - 3) {
+            o -= 0.002;
+            if (o < 0) {
+              elem.remove(elem);
+            }
+          }
+            y1 -= 0.01;
+            elem.style.left = x + '%';
+            elem.style.top = y1 + '%';
+            elem.style.opacity = o;
+        }
+    }
   }
 }

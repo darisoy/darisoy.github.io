@@ -133,7 +133,6 @@ ul {
     margin-bottom: 1.36364em;
 }
 
-
 .home a {
     color: white;
 }
@@ -143,17 +142,6 @@ a {
     cursor: pointer;
     text-decoration: none;
 }
-
-/*span:hover {
-    background-color: red;
-}
-
-
-h1 {
-  background-image: url("logo.jpg");
-}
-*/
-
 
 .popup {
     position: relative;
@@ -205,4 +193,18 @@ h1 {
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+h2 {
+  width: max-content;
+  height: 33px;
+  opacity: 0;
+  color: white;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0%;
+  top: 0%;
 }
