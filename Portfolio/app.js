@@ -138,7 +138,7 @@
 
   //displays skills on the background, selects the random skill and location
   function skills() {
-    var word = ['java programming', 'data structures', 'algorithms', 'javascript', 'hmtl 5', 'css', 'cisco-certified engineer', 'virtualization', 'linux', 'windows', 'mac os', 'data center operations', 'labview programming', 'english', 'spanish', 'turkish'];
+    var word = ['java programming', 'data structures', 'algorithms', 'javascript', 'hmtl 5', 'css', 'cisco-certified engineer', 'virtualization', 'linux', 'windows', 'mac os', 'data center operations', 'labview programming'];
     var x = (Math.random() * 80) + 10;
     var y = (Math.random() * 80) + 10;
     document.querySelector(".skills").insertAdjacentHTML('beforeend', '<h2 class=\'s' + s + '\'>' + word[Math.floor(Math.random() * word.length)] + '</h2>');
