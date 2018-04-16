@@ -52,6 +52,7 @@
     var colors = ["#002b80", "#000000", "#ff0000", "#006600", "#995c00", "#990000", "#990099", "#52527a", "#ff6699"];
     color = colors[Math.floor(Math.random() * colors.length)];
     document.querySelector(".logo").style.backgroundColor = color;
+    document.getElementById("hoop").style.border = '3px solid ' + color;
     num = Math.floor(Math.random() * pics) + 1;
     var url = document.querySelector(".logo").style.backgroundImage;
     if (url.includes("logo")) {
@@ -60,7 +61,6 @@
     } else {
       document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
     }
-
   }
 
   //enters the links, goes between Doruk and Projects page
@@ -117,6 +117,11 @@
       if (event.keyCode === 13 || event.which === 13) {
           colorSelect();
       }
+  });
+
+  //changes the color when logo is clicked
+  document.querySelector('.logo').addEventListener('click', function() {
+    colorSelect();
   });
 
   //alternates the page title between Doruk and press enter to change color
@@ -185,4 +190,13 @@
         }
     }
   }
+
+  //hoop around the mouse
+  document.addEventListener('mousemove', function() {
+    var x = event.clientX;
+    var y = event.clientY;
+    var elem = document.getElementById('hoop');
+    elem.style.left = x - 15 + 'px';
+    elem.style.top = y + 43 + 'px';
+  });
 }

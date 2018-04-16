@@ -50,6 +50,7 @@ element.style {
     position: relative;
     text-align: center;
     width: 100%;
+    z-index: 10;
 }
 
 #header hgroup {
@@ -84,6 +85,7 @@ element.style {
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
+
 }
 
 .home .logo:before {
@@ -207,4 +209,19 @@ h2 {
   position: absolute;
   left: 0%;
   top: 0%;
+}
+
+#hoop{
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    border: 3px solid blue;
+    background: transparent;
+    /* background-color: black; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
 }
