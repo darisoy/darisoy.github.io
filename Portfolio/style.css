@@ -81,7 +81,7 @@ element.style {
     height: 45px;
     background-color: #000000;
     background-size: contain;
-    cursor: none;
+    cursor: pointer;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
