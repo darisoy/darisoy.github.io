@@ -17,7 +17,7 @@
     document.querySelector('.animate-bottom').style.display= 'block';
     document.getElementById('hoop').style.display= 'block';
   } else {
-    setTimeout(start, 3000);
+    setTimeout(start, 5000);
   }
 
   //calculates date and time and updates it every second
