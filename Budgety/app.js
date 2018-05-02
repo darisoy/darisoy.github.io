@@ -60,7 +60,7 @@
 
   //adds an entry object to the app
   function addValue(entr) {
-    document.cookie = "" + entr.id + " = " + entr.id + ":" + entr.description + ":" + entr.sign + ":" + entr.value + '=; expires=Thu, 01 Jan 2020 00:00:01 GMT;';
+    document.cookie = "" + entr.id + " = " + entr.id + ":" + entr.description + ":" + entr.sign + ":" + entr.value;
     if (entr.sign == "inc") {
       income += Math.round(parseFloat(entr.value) * 100) / 100;
       calcInc();
