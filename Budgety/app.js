@@ -222,14 +222,16 @@
     var decodedCookie = decodeURIComponent(document.cookie);
     if (decodedCookie != "") {
       var ca = decodedCookie.split(';');
-      for (var i = 0; i < ca.length - 1; i++) {
-        var clean = decodeURIComponent(ca[i]);
-        var cl = clean.split('=');
-        if (parseInt(cl[0]) > overID) {
-          overID = parseInt(cl[0]);
+      for (var i = 0; i < ca.length; i++) {
+          if (!ca[i].includes('false')) {
+          var clean = decodeURIComponent(ca[i]);
+          var cl = clean.split('=');
+          if (parseInt(cl[0]) > overID) {
+            overID = parseInt(cl[0]);
+          }
+          var c = cl[1].split(':');
+          addValue(new Entry(c[1], c[2], c[3], c[0]));
         }
-        var c = cl[1].split(':');
-        addValue(new Entry(c[1], c[2], c[3], c[0]));
       }
     }
   }
