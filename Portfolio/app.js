@@ -3,12 +3,16 @@
   var pics = 6;
   var num = Math.floor(Math.random() * pics) + 1;
   var s = 1;
+  var first = decodeURIComponent(document.cookie);
+  if (first.includes('false')) {
+    document.querySelector('.loader').style.display= 'none';
+  }
 
-  skills();
   changeTitle(0);
   renderTime();
   intro();
   colorSelect();
+  setTimeout(start, 3000);
 
   //calculates date and time and updates it every second
   function renderTime() {
@@ -43,7 +47,7 @@
       d = "0" + d;
     }
 
-    document.querySelector(".budget__title--month").textContent = "" + mon + "/" + d + "/" + y + " " + h + ":" + min + ":" + s  + diem;
+    document.querySelector(".date").textContent = "" + mon + "/" + d + "/" + y + " " + h + ":" + min + ":" + s  + diem;
     setTimeout('renderTime()', 1000);
   }
 
@@ -52,6 +56,7 @@
     var colors = ["#002b80", "#000000", "#ff0000", "#006600", "#995c00", "#990000", "#990099", "#52527a", "#ff6699"];
     color = colors[Math.floor(Math.random() * colors.length)];
     document.querySelector(".logo").style.backgroundColor = color;
+    document.querySelector(".loader").style.backgroundColor = color;
     document.getElementById("hoop").style.border = '3px solid ' + color;
     num = Math.floor(Math.random() * pics) + 1;
     var url = document.querySelector(".logo").style.backgroundImage;
@@ -199,4 +204,14 @@
     elem.style.left = x - 15 + 'px';
     elem.style.top = y + 43 + 'px';
   });
+
+  //makes the logo and links appear with annimation
+  function start() {
+    document.querySelector('.loader').style.display= 'none';
+    document.cookie = 'false';
+    skills();
+    document.querySelector('.animate-top').style.display= 'block';
+    document.querySelector('.animate-bottom').style.display= 'block';
+    document.getElementById('hoop').style.display= 'block';
+  }
 }
