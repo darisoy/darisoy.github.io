@@ -90,10 +90,11 @@
     document.querySelector(".projects").addEventListener("click", function() {
       var element = document.getElementById("div1");
       element.remove(element);
-      document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a id="a6" href="./Budgety/index.html">budgeting app</a></span></li><li><span><a id="a7" href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a id="a8">more coming soon...</a></span></li><li><span><a id = "a9" class="back">< back</a></span></li></div>');
+      //ADD THIS PORTFOLIO to the projects with the link to github source code!!!!
+      document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a id="a6" href="./Budgety/index.html">budgeting app</a></span></li><li><span><a id="a7" href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a id="a8" href="https://github.com/d1r1karsy/d1r1karsy.github.io" target="_blank">this portfolio</a></span></li><li><span><a id="a9">more coming soon...</a></span></li><li><span><a id = "a10" class="back">< back</a></span></li></div>');
       //document.getElementById("a8").addEventListener("click", colorSelect());
       document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
-      for (var i = 6; i < 10; i++) {
+      for (var i = 6; i < 11; i++) {
         hover("a" + i);
       }
       document.querySelector(".back").addEventListener("click", function() {
