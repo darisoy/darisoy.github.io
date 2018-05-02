@@ -4,15 +4,21 @@
   var num = Math.floor(Math.random() * pics) + 1;
   var s = 1;
   var first = decodeURIComponent(document.cookie);
-  if (first.includes('false')) {
-    document.querySelector('.loader').style.display= 'none';
-  }
 
   changeTitle(0);
   renderTime();
   intro();
   colorSelect();
-  setTimeout(start, 3000);
+
+  if (first.includes('false')) {
+    document.querySelector('.loader').style.display= 'none';
+    skills();
+    document.querySelector('.animate-top').style.display= 'block';
+    document.querySelector('.animate-bottom').style.display= 'block';
+    document.getElementById('hoop').style.display= 'block';
+  } else {
+    setTimeout(start, 3000);
+  }
 
   //calculates date and time and updates it every second
   function renderTime() {
