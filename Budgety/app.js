@@ -222,7 +222,7 @@
     var decodedCookie = decodeURIComponent(document.cookie);
     if (decodedCookie != "") {
       var ca = decodedCookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
+      for (var i = 0; i < ca.length - 1; i++) {
         var clean = decodeURIComponent(ca[i]);
         var cl = clean.split('=');
         if (parseInt(cl[0]) > overID) {
