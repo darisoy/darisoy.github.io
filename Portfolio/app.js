@@ -5,11 +5,13 @@
   var s = 1;
   var first = decodeURIComponent(document.cookie);
 
-  changeTitle(0);
+  //changeTitle(0);
   renderTime();
   intro();
   colorSelect();
 
+  //check if the loader was already shown
+  //MAKE THIS A FUNCTION
   if (first.includes('false')) {
     document.querySelector('.loader').style.display= 'none';
     skills();
@@ -107,50 +109,43 @@
     var url = document.querySelector(".logo").style.backgroundImage;
     document.getElementById(id).addEventListener("mouseover", function(){
       document.getElementById(id).style.backgroundColor = color;
-      // document.addEventListener('keypress', function(event) {
-      //   if (event.keyCode === 13 || event.which === 13) {
-      //     document.getElementById(id).style.backgroundColor = color;
-      //   }
-      // });
     });
     document.getElementById(id).addEventListener("mouseout", function(){
       document.getElementById(id).style.backgroundColor = "transparent";
-      // document.addEventListener('keypress', function(event) {
-      //   if (event.keyCode === 13 || event.which === 13) {
-      //     document.getElementById(id).style.backgroundColor = "transparent";
-      //   }
-      // });
     });
   }
 
+  // TERMINATED FEATURE
   //changes the color when enter is pressed
-  document.addEventListener('keypress', function(event) {
-      if (event.keyCode === 13 || event.which === 13) {
-          colorSelect();
-      }
-  });
+  // document.addEventListener('keypress', function(event) {
+  //     if (event.keyCode === 13 || event.which === 13) {
+  //         colorSelect();
+  //     }
+  // });
 
   //changes the color when logo is clicked
   document.querySelector('.logo').addEventListener('click', function() {
     colorSelect();
+    setTimeout(function(){ document.querySelector('.clickme').style.display= 'none'; }, 1000);
   });
 
+  //TERMINATED FEATURE
   //alternates the page title between Doruk and press enter to change color
-  function changeTitle(i) {
-    var html = ["Doruk", "Press ENTER", "To Change Theme"];
-    var sec;
-    if (i == 0) {
-      sec = 5000;
-    } else {
-      sec = 1000;
-    }
-    document.getElementById('title').innerHTML = html[i];
-    i++;
-    if (i == 3) {
-      i = 0;
-    }
-    setTimeout('changeTitle(' + i + ')', sec);
-  }
+  // function changeTitle(i) {
+  //   var html = ["Doruk", "Press ENTER", "To Change Theme"];
+  //   var sec;
+  //   if (i == 0) {
+  //     sec = 5000;
+  //   } else {
+  //     sec = 1000;
+  //   }
+  //   document.getElementById('title').innerHTML = html[i];
+  //   i++;
+  //   if (i == 3) {
+  //     i = 0;
+  //   }
+  //   setTimeout('changeTitle(' + i + ')', sec);
+  // }
 
   //displays skills on the background, selects the random skill and location
   function skills() {
@@ -174,7 +169,6 @@
     var o = 0.2;
     var id2;
     var elem = document.querySelector(s);
-    //elem.style.color = color;
     elem.style.fontSize = (Math.random() * 18) + 10 + 'px';
     var id1 = setInterval(frame1, 1);
     function frame1() {
@@ -196,10 +190,10 @@
               elem.remove(elem);
             }
           }
-            y1 -= 0.01;
-            elem.style.left = x + '%';
-            elem.style.top = y1 + '%';
-            elem.style.opacity = o;
+          y1 -= 0.01;
+          elem.style.left = x + '%';
+          elem.style.top = y1 + '%';
+          elem.style.opacity = o;
         }
     }
   }
@@ -216,11 +210,11 @@
   //makes the logo and links appear with annimation
   function start() {
     document.cookie = 'false';
-    // skills();
     document.querySelector('.animate-top').style.display= 'block';
     document.querySelector('.animate-bottom').style.display= 'block';
     document.getElementById('hoop').style.display= 'block';
     setTimeout(function(){ document.querySelector('.loader').style.display= 'none'; }, 1000);
     setTimeout(skills, 2000);
+    setTimeout(function(){ document.querySelector('.clickme').style.display= 'block';}, 7000);
   }
 }

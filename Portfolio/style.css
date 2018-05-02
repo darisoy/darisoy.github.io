@@ -1,279 +1,278 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 body {
-    font-family: "Courier New", Courier, Monaco;
-    font-size: 0.7875em;
-    position: relative;
-    height: 100vh;
-    font-weight: 400;
-    background-image: url("background.jpg");
-    background-color: black;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  font-family: "Courier New", Courier, Monaco;
+  font-size: 0.7875em;
+  position: relative;
+  height: 100vh;
+  font-weight: 400;
+  background-image: url("background.jpg");
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 element.style {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
 .home {
-    background: url("background.jpg");
-    opacity: 1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: black;
+  background: url("background.jpg");
+  opacity: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: black;
 }
 
 .home #header {
-    margin: 0 auto 0 auto;
-    margin-top: -4.18182em;
-    z-index: 1000;
+  margin: 0 auto 0 auto;
+  margin-top: -4.18182em;
+  z-index: 1000;
 }
 #header {
-    background: transparent;
-    height: 50%;
-    margin: -20.45455em auto 4.09091em;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    z-index: 10;
+  background: transparent;
+  height: 50%;
+  margin: -20.45455em auto 4.09091em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
 }
 
 #header hgroup {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -8.09091em;
-    width: 178px;
-    height: 75px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -8.09091em;
+  width: 178px;
+  height: 75px;
 }
 
 #header .logo {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .home .logo {
-    border: 0;
-    overflow: hidden;
-    display: block;
-    background-position-x: center;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-size: 150px, 45px;
-    width: 150px;
-    height: 45px;
-    background-color: #000000;
-    background-size: contain;
-    cursor: pointer;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-
+  border: 0;
+  overflow: hidden;
+  display: block;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-size: 150px, 45px;
+  width: 150px;
+  height: 45px;
+  background-color: #000000;
+  background-size: contain;
+  cursor: pointer;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
 }
 
 .home .logo:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
 }
 
 .home #wrap {
-    height: auto;
-    z-index: 1000;
+  height: auto;
+  z-index: 1000;
 }
 #wrap {
-    height: 50em;
-    margin: 0 auto;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 60.54545em;
+  height: 50em;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 60.54545em;
 }
 
 .home nav {
-    margin: 4em 0 0 25.54545em;
-    overflow: visible;
-    width: 385px;
+  margin: 4em 0 0 25.54545em;
+  overflow: visible;
+  width: 385px;
 }
 
 .home nav {
-    margin-left: auto;
-    margin-right: auto;
-    width: 230px;
-    padding-left: 37px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 230px;
+  padding-left: 37px;
 }
 
 .home ul {
-    margin: 0;
-    width: auto;
+  margin: 0;
+  width: auto;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .home li {
-    margin-bottom: 1.36364em;
+  margin-bottom: 1.36364em;
 }
 
 .home a {
-    color: white;
+  color: white;
 }
+
 a {
-    font-size: 12px;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
+  font-size: 12px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* The actual popup */
 .popup .popuptext {
-    visibility: hidden;
-    background-color: #000000;
-    font-family: "Courier New", Courier, Monaco;
-    font-size: 12px;
-    color: white;
-    color: #fff;
-    text-align: center;
-    width: 280px;
-    height: 30px;
-    border-radius: 0px;
-    padding:  0;
-    position: absolute;
-    z-index: 1;
-    bottom: -275%;
-    left: -125%;
-    margin-left: 0px;
-    cursor: none;
-    background-image: url("email.png");
-    background-size: contain;
+  visibility: hidden;
+  background-color: #000000;
+  font-family: "Courier New", Courier, Monaco;
+  font-size: 12px;
+  color: white;
+  color: #fff;
+  text-align: center;
+  width: 280px;
+  height: 30px;
+  border-radius: 0px;
+  padding:  0;
+  position: absolute;
+  z-index: 1;
+  bottom: -275%;
+  left: -125%;
+  margin-left: 0px;
+  cursor: none;
+  background-image: url("email.png");
+  background-size: contain;
 }
 
 /* Toggle this class - hide and show the popup */
 .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {opacity: 0;}
+  to   {opacity: 1;}
 }
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {opacity: 0;}
+  to   {opacity: 1;}
 }
 
 h2 {
-    width: max-content;
-    height: 33px;
-    opacity: 0;
-    color: #dddddd;
-    background-size: contain;
-    background-position-x: center;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0%;
-    top: 0%;
+  width: max-content;
+  height: 33px;
+  opacity: 0;
+  color: #dddddd;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0%;
+  top: 0%;
 }
 
 #hoop{
-    display: none;
-    width: 40px;
-    height: 40px;
-    -moz-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    border-radius: 100%;
-    border: 3px solid blue;
-    background: transparent;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s
+  display: none;
+  width: 40px;
+  height: 40px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  border: 3px solid blue;
+  background: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
 }
 
 @-webkit-keyframes hoopappear {
-    from { opacity:0 }
-    to { opacity:1 }
+  from { opacity:0 }
+  to { opacity:1 }
 }
 
 @keyframes hoopappear {
-    from { opacity:0 }
-    to { opacity:1 }
+  from { opacity:0 }
+  to { opacity:1 }
 }
 
 .animate-bottom {
-    display: none;
-    position: relative;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 1s;
-    animation-name: animatebottom;
-    animation-duration: 1s
+  display: none;
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
 }
 
 @-webkit-keyframes animatebottom {
-    from { bottom:-100px; opacity:0 }
-    to { bottom:0px; opacity:1 }
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
 }
 
 @keyframes animatebottom {
-    from { bottom:-100px; opacity:0 }
-    to { bottom:0; opacity:1 }
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0; opacity:1 }
 }
 
 .animate-top {
-    display: none;
-    position: relative;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 1s;
-    animation-name: animatetop;
-    animation-duration: 1s
+  display: none;
+  position: relative;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 1s;
+  animation-name: animatetop;
+  animation-duration: 1s
 }
 
 @-webkit-keyframes animatetop {
-    from { bottom:100px; opacity:0 }
-    to { bottom:0px; opacity:1 }
+  from { bottom:100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
 }
 
 @keyframes animatetop {
-    from { bottom:100px; opacity:0 }
-    to { bottom:0; opacity:1 }
+  from { bottom:100px; opacity:0 }
+  to { bottom:0; opacity:1 }
 }
 
 .loader {
@@ -292,4 +291,30 @@ h2 {
 @keyframes disapear {
   from  {width: 100%; height: 1em; left: 0%; opacity: 1}
   to    {width: 0%; height: 0em; left: 50%; opacity: 0}
+}
+
+.clickme {
+  position: relative;
+  z-index: 10;
+  top: -70px;
+  left: 150px;
+  color: white;
+  display: none;;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right:55px solid #474747;
+  border-radius: 5px;
+}
+
+.clickme p {
+  text-align: center;
+  top: -6px;
+  left: 15px;
+  position: relative;
+  margin: 0px;
+  color: #d6d6d6;
 }
