@@ -17,7 +17,7 @@
     document.querySelector('.animate-bottom').style.display= 'block';
     document.getElementById('hoop').style.display= 'block';
   } else {
-    setTimeout(start, 5000);
+    setTimeout(start, 4000);
   }
 
   //calculates date and time and updates it every second
@@ -158,7 +158,9 @@
     var x = (Math.random() * 80) + 10;
     var y = (Math.random() * 80) + 10;
     document.querySelector(".skills").insertAdjacentHTML('beforeend', '<h2 class=\'s' + s + '\'>' + word[Math.floor(Math.random() * word.length)] + '</h2>');
-    animate(x, y, '.s' + s);
+    if (x > 55 || x < 45 || (x <= 55 && x >= 45 && y > 60) || (x <= 55 && x >= 45 && y < 40)) {
+      animate(x, y, '.s' + s);
+    }
     s++;
     if (s > 10) {
       s = 1;
@@ -213,11 +215,12 @@
 
   //makes the logo and links appear with annimation
   function start() {
-    document.querySelector('.loader').style.display= 'none';
     document.cookie = 'false';
-    skills();
+    // skills();
     document.querySelector('.animate-top').style.display= 'block';
     document.querySelector('.animate-bottom').style.display= 'block';
     document.getElementById('hoop').style.display= 'block';
+    setTimeout(function(){ document.querySelector('.loader').style.display= 'none'; }, 1000);
+    setTimeout(skills, 2000);
   }
 }
