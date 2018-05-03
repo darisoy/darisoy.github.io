@@ -18,6 +18,8 @@
     document.querySelector('.animate-top').style.display= 'block';
     document.querySelector('.animate-bottom').style.display= 'block';
     document.getElementById('hoop').style.display= 'block';
+    setTimeout(function(){ document.querySelector('.clickme').style.display= 'block';}, 7000);
+    setTimeout(function(){ document.querySelector('.highlight').style.display= 'block';}, 8000);
   } else {
     setTimeout(start, 4000);
   }
