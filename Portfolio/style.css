@@ -143,6 +143,7 @@ a {
   text-decoration: none;
 }
 
+/* The contact popup*/
 .popup {
   position: relative;
   display: inline-block;
@@ -153,7 +154,7 @@ a {
   user-select: none;
 }
 
-/* The actual popup */
+/* The contact popup's content */
 .popup .popuptext {
   visibility: hidden;
   background-color: #000000;
@@ -176,19 +177,20 @@ a {
   background-size: contain;
 }
 
-/* Toggle this class - hide and show the popup */
+/* show the popup */
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
 
-/* Add animation (fade in the popup) */
+/*animation for the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
   to   {opacity: 1;}
 }
 
+/*animation for the popup) */
 @keyframes fadeIn {
   from {opacity: 0;}
   to   {opacity: 1;}
@@ -208,6 +210,7 @@ h2 {
   top: 0%;
 }
 
+/* hoop that appears around the mouse */
 #hoop{
   display: none;
   width: 40px;
@@ -227,16 +230,19 @@ h2 {
   animation-duration: 1s
 }
 
+/* annimation for the hoop */
 @-webkit-keyframes hoopappear {
   from { opacity:0 }
   to { opacity:1 }
 }
 
+/* annimation for the hoop */
 @keyframes hoopappear {
   from { opacity:0 }
   to { opacity:1 }
 }
 
+/* initial animation for logo */
 .animate-bottom {
   display: none;
   position: relative;
@@ -246,16 +252,19 @@ h2 {
   animation-duration: 1s
 }
 
+/* initial animation for logo */
 @-webkit-keyframes animatebottom {
   from { bottom:-100px; opacity:0 }
   to { bottom:0px; opacity:1 }
 }
 
+/* initial animation for logo */
 @keyframes animatebottom {
   from { bottom:-100px; opacity:0 }
   to { bottom:0; opacity:1 }
 }
 
+/* initial animation for the links */
 .animate-top {
   display: none;
   position: relative;
@@ -265,16 +274,19 @@ h2 {
   animation-duration: 1s
 }
 
+/* initial animation for the links */
 @-webkit-keyframes animatetop {
   from { bottom:100px; opacity:0 }
   to { bottom:0px; opacity:1 }
 }
 
+/* initial animation for the links */
 @keyframes animatetop {
   from { bottom:100px; opacity:0 }
   to { bottom:0; opacity:1 }
 }
 
+/* the bar that appers as the loader */
 .loader {
   position: fixed;
   top: 45%;
@@ -284,28 +296,57 @@ h2 {
   margin: 0 auto;
   background-color: black;
   animation-delay: 3s;
-  animation-name: disapear;
+  animation-name: disapear1;
   animation-duration: 2.5s;
-  -webkit-animation-name: disapear;
+  -webkit-animation-name: disapear1;
   -webkit-animation-duration: 2.5s;
   -webkit-animation-delay: 3s;
 }
 
-@-webkit-keyframes disapear {
+/* message on the loader */
+.loader p {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  position: relative;
+  margin: 0px;
+  color: white;
+  animation-delay: 3s;
+  animation-name: disapear2;
+  animation-duration: 2.5s;
+  -webkit-animation-name: disapear2;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-delay: 3s;
+}
+
+/* animation for the bar that appers as the loader */
+@-webkit-keyframes disapear1 {
   from  {width: 100%; height: 1em; left: 0%; opacity: 1}
   to    {width: 0%; height: 0em; left: 50%; opacity: 0}
 }
 
-@keyframes disapear {
+/* animation for the bar that appers as the loader */
+@keyframes disapear1 {
   from  {width: 100%; height: 1em; left: 0%; opacity: 1}
   to    {width: 0%; height: 0em; left: 50%; opacity: 0}
 }
 
+/* animation for the message on the loader */
+@-webkit-keyframes disapear2 {
+  from  {font-size: 1em; opacity: 1}
+  to    {font-size: 0em; opacity: 0}
+}
+
+/* animation for the message on the loader */
+@keyframes disapear2 {
+  from  {font-size: 1em; opacity: 1}
+  to    {font-size: 0em; opacity: 0}
+}
+
+/* click popup next to the logo */
 .clickme {
   position: relative;
   z-index: 10;
-  /* top: -70px;
-  left: 150px; */
   top: -58px;
   left: 175px;
   color: black;
@@ -313,19 +354,13 @@ h2 {
   display: none;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
-
-  /* width: 0;
-  height: 0;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-  border-right:55px solid #555;;
-  border-radius: 10px; */
   border-radius: 5%;
   height: 15px;
   width: 45px;
   background-color: #424242;
 }
 
+/* arrow of click popup */
 .clickme::after {
     content: "";
     position: absolute;
@@ -336,11 +371,10 @@ h2 {
     border-color: transparent #424242 transparent transparent;
 }
 
+/* text of the click popup */
 .clickme p {
   font-weight: bold;
   text-align: center;
-  /* top: -6px;
-  left: 15px; */
   top: 1px;
   left: -1px;
   position: relative;
@@ -348,6 +382,7 @@ h2 {
   color: white;
 }
 
+/* the highligh behind the click popup that expands */
 .highlight {
   position: relative;
   z-index: -5;
@@ -368,11 +403,13 @@ h2 {
   -webkit-animation-iteration-count: infinite;
 }
 
+/* animation for the highligh behind the click popup that expands */
 @-webkit-keyframes expand {
   from  {width: 45px; height: 15px; top: -73px; left: 175px; opacity: 1}
   to    {width: 55px; height: 25px; top: -78px; left: 170px; opacity: 0}
 }
 
+/* animation for the highligh behind the click popup that expands */
 @keyframes expand {
   from  {width: 45px; height: 15px; top: -73px; left: 175px; opacity: 1}
   to    {width: 55px; height: 25px; top: -78px; left: 170px; opacity: 0}

@@ -5,23 +5,25 @@
   var s = 1;
   var first = decodeURIComponent(document.cookie);
 
-  //changeTitle(0);
+  changeTitle(0);
   renderTime();
   intro();
   colorSelect();
+  checkLoader();
 
   //check if the loader was already shown
-  //MAKE THIS A FUNCTION
-  if (first.includes('false')) {
-    document.querySelector('.loader').style.display= 'none';
-    skills();
-    document.querySelector('.animate-top').style.display= 'block';
-    document.querySelector('.animate-bottom').style.display= 'block';
-    document.getElementById('hoop').style.display= 'block';
-    setTimeout(function(){ document.querySelector('.clickme').style.display= 'block';}, 7000);
-    setTimeout(function(){ document.querySelector('.highlight').style.display= 'block';}, 8000);
-  } else {
-    setTimeout(start, 4000);
+  function checkLoader() {
+    if (first.includes('false')) {
+      document.querySelector('.loader').style.display= 'none';
+      skills();
+      document.querySelector('.animate-top').style.display= 'block';
+      document.querySelector('.animate-bottom').style.display= 'block';
+      document.getElementById('hoop').style.display= 'block';
+      setTimeout(function(){ document.querySelector('.clickme').style.display= 'block';}, 7000);
+      setTimeout(function(){ document.querySelector('.highlight').style.display= 'block';}, 8000);
+    } else {
+      setTimeout(start, 4000);
+    }
   }
 
   //calculates date and time and updates it every second
@@ -133,23 +135,22 @@
     setTimeout(function(){ document.querySelector('.clickme').style.display= 'none'; }, 1000);
   });
 
-  //TERMINATED FEATURE
-  //alternates the page title between Doruk and press enter to change color
-  // function changeTitle(i) {
-  //   var html = ["Doruk", "Press ENTER", "To Change Theme"];
-  //   var sec;
-  //   if (i == 0) {
-  //     sec = 5000;
-  //   } else {
-  //     sec = 1000;
-  //   }
-  //   document.getElementById('title').innerHTML = html[i];
-  //   i++;
-  //   if (i == 3) {
-  //     i = 0;
-  //   }
-  //   setTimeout('changeTitle(' + i + ')', sec);
-  // }
+  // alternates the page title between Doruk, Arisoy and portfolio
+  function changeTitle(i) {
+    var html = ["Doruk", "Arisoy", "Portfolio"];
+    var sec;
+    if (i == 0) {
+      sec = 10000;
+    } else {
+      sec = 1000;
+    }
+    document.getElementById('title').innerHTML = html[i];
+    i++;
+    if (i == 3) {
+      i = 0;
+    }
+    setTimeout('changeTitle(' + i + ')', sec);
+  }
 
   //displays skills on the background, selects the random skill and location
   function skills() {

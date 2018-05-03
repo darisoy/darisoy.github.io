@@ -32,7 +32,7 @@
     document.querySelector(".add__btn").classList.toggle("red");
   });
 
-  //when pressed enter
+  //create a new entry when pressed enter
   document.addEventListener('keypress', function(event) {
       if (event.keyCode === 13 || event.which === 13) {
           typeEntry();
