@@ -127,6 +127,7 @@
   //changes the color when logo is clicked
   document.querySelector('.logo').addEventListener('click', function() {
     colorSelect();
+    document.querySelector('.highlight').style.display= 'none';
     setTimeout(function(){ document.querySelector('.clickme').style.display= 'none'; }, 1000);
   });
 
@@ -217,5 +218,6 @@
     setTimeout(function(){ document.querySelector('.loader').style.display= 'none'; }, 1000);
     setTimeout(skills, 2000);
     setTimeout(function(){ document.querySelector('.clickme').style.display= 'block';}, 7000);
+    setTimeout(function(){ document.querySelector('.highlight').style.display= 'block';}, 8000);
   }
 }
