@@ -13,6 +13,7 @@
 
   //check if the loader was already shown
   function checkLoader() {
+    document.querySelector('.loader').style.display= 'block';
     if (first.includes('false')) {
       document.querySelector('.loader').style.display= 'none';
       skills();

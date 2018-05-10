@@ -222,8 +222,8 @@ h2 {
   border: 3px solid blue;
   background: transparent;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -50px;
+  left: -50px;
   z-index: -1;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
@@ -289,6 +289,7 @@ h2 {
 
 /* the bar that appers as the loader */
 .loader {
+  display: none;
   position: fixed;
   top: 45%;
   left: 0%;
