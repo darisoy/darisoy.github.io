@@ -213,6 +213,7 @@ h2 {
 /* hoop that appears around the mouse */
 #hoop{
   display: none;
+  opacity: 1;
   width: 40px;
   height: 40px;
   -moz-border-radius: 100%;
@@ -295,12 +296,12 @@ h2 {
   height: 1em;
   margin: 0 auto;
   background-color: black;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-name: disapear1;
   animation-duration: 2.5s;
   -webkit-animation-name: disapear1;
   -webkit-animation-duration: 2.5s;
-  -webkit-animation-delay: 3s;
+  -webkit-animation-delay: 2s;
 }
 
 /* message on the loader */
@@ -311,12 +312,12 @@ h2 {
   position: relative;
   margin: 0px;
   color: white;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-name: disapear2;
   animation-duration: 2.5s;
   -webkit-animation-name: disapear2;
   -webkit-animation-duration: 2.5s;
-  -webkit-animation-delay: 3s;
+  -webkit-animation-delay: 2s;
 }
 
 /* animation for the bar that appers as the loader */

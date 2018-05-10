@@ -4,26 +4,40 @@
   var num = Math.floor(Math.random() * pics) + 1;
   var s = 1;
   var first = decodeURIComponent(document.cookie);
+  var skillWork = false;
 
   changeTitle(0);
   renderTime();
   intro();
   colorSelect();
-  checkLoader();
 
   //check if the loader was already shown
   function checkLoader() {
     if (first.includes('false')) {
       document.querySelector('.loader').style.display= 'none';
       skills();
+      skillWork = true;
+      outOfFocus();
       document.querySelector('.animate-top').style.display= 'block';
       document.querySelector('.animate-bottom').style.display= 'block';
       document.getElementById('hoop').style.display= 'block';
-      setTimeout(function(){ document.querySelector('.clickme').style.display= 'block';}, 7000);
-      setTimeout(function(){ document.querySelector('.highlight').style.display= 'block';}, 8000);
     } else {
-      setTimeout(start, 4000);
+      setTimeout(start, 3000);
     }
+    setTimeout(function(){ document.querySelector('.clickme').style.display= 'block';}, 7000);
+    setTimeout(function(){ document.querySelector('.highlight').style.display= 'block';}, 8000);
+  }
+
+  //makes the logo and links appear with annimation
+  function start() {
+    document.cookie = 'false';
+    document.querySelector('.animate-top').style.display= 'block';
+    document.querySelector('.animate-bottom').style.display= 'block';
+    document.getElementById('hoop').style.display= 'block';
+    setTimeout(function(){ document.querySelector('.loader').style.display= 'none'; }, 1000);
+    setTimeout(skills, 2000);
+    skillWork = true;
+    setTimeout(outOfFocus, 2000);
   }
 
   //calculates date and time and updates it every second
@@ -36,7 +50,6 @@
     var y = now.getFullYear();
     var mon = now.getMonth() + 1;
     var d = now.getDate();
-
     if (h == 0) {
       h = "00";
     } else if (h > 12) {
@@ -58,7 +71,6 @@
     if (d < 10) {
       d = "0" + d;
     }
-
     document.querySelector(".date").textContent = "" + mon + "/" + d + "/" + y + " " + h + ":" + min + ":" + s  + diem;
     setTimeout('renderTime()', 1000);
   }
@@ -94,9 +106,7 @@
     document.querySelector(".projects").addEventListener("click", function() {
       var element = document.getElementById("div1");
       element.remove(element);
-      //ADD THIS PORTFOLIO to the projects with the link to github source code!!!!
       document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a id="a6" href="./Budgety/index.html">budgeting app</a></span></li><li><span><a id="a7" href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a id="a8" href="https://github.com/d1r1karsy/d1r1karsy.github.io" target="_blank">this portfolio</a></span></li><li><span><a id="a9">more coming soon...</a></span></li><li><span><a id = "a10" class="back">< back</a></span></li></div>');
-      //document.getElementById("a8").addEventListener("click", colorSelect());
       document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
       for (var i = 6; i < 11; i++) {
         hover("a" + i);
@@ -132,7 +142,7 @@
   document.querySelector('.logo').addEventListener('click', function() {
     colorSelect();
     document.querySelector('.highlight').style.display= 'none';
-    setTimeout(function(){ document.querySelector('.clickme').style.display= 'none'; }, 1000);
+    setTimeout(function(){ document.querySelector('.clickme').style.display= 'none'; }, 500);
   });
 
   // alternates the page title between Doruk, Arisoy and portfolio
@@ -158,14 +168,14 @@
     var x = (Math.random() * 80) + 10;
     var y = (Math.random() * 80) + 10;
     document.querySelector(".skills").insertAdjacentHTML('beforeend', '<h2 class=\'s' + s + '\'>' + word[Math.floor(Math.random() * word.length)] + '</h2>');
-    if (x > 55 || x < 45 || (x <= 55 && x >= 45 && y > 60) || (x <= 55 && x >= 45 && y < 40)) {
+    if (skillWork) {
       animate(x, y, '.s' + s);
     }
     s++;
     if (s > 10) {
       s = 1;
     }
-    setTimeout('skills()', ((Math.random() * 10) + 1) * 500);
+    setTimeout('skills()', ((Math.random() * 5) + 1) * 500);
   }
 
   //animates a word in the background, moves it up and makes it disappear
@@ -174,7 +184,7 @@
     var o = 0.2;
     var id2;
     var elem = document.querySelector(s);
-    elem.style.fontSize = (Math.random() * 18) + 10 + 'px';
+    elem.style.fontSize = (Math.random() * 16) + 10 + 'px';
     var id1 = setInterval(frame1, 1);
     function frame1() {
       if (o > 0.6) {
@@ -212,15 +222,24 @@
     elem.style.top = y + 43 + 'px';
   });
 
-  //makes the logo and links appear with annimation
-  function start() {
-    document.cookie = 'false';
-    document.querySelector('.animate-top').style.display= 'block';
-    document.querySelector('.animate-bottom').style.display= 'block';
-    document.getElementById('hoop').style.display= 'block';
-    setTimeout(function(){ document.querySelector('.loader').style.display= 'none'; }, 1000);
-    setTimeout(skills, 2000);
-    setTimeout(function(){ document.querySelector('.clickme').style.display= 'block';}, 7000);
-    setTimeout(function(){ document.querySelector('.highlight').style.display= 'block';}, 8000);
+  //dims the hoop when mousedown
+  document.addEventListener('mousedown', function() {
+    var elem = document.getElementById('hoop');
+    elem.style.opacity = '0.3';
+    document.addEventListener('mouseup', function() {
+      elem.style.opacity = '1';
+    });
+  });
+
+  //stops the skills and removes the hoop around the mouse when the mouse leaves the page
+  function  outOfFocus() {
+    document.addEventListener('mouseout', function() {
+      document.getElementById('hoop').style.display= 'none';
+      skillWork = false;
+    });
+    document.addEventListener('mouseover', function() {
+      document.getElementById('hoop').style.display= 'block';
+      skillWork = true;
+    });
   }
 }
