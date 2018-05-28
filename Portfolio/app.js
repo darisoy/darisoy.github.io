@@ -107,7 +107,7 @@
     document.querySelector(".projects").addEventListener("click", function() {
       var element = document.getElementById("div1");
       element.remove(element);
-      document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a id="a6" href="./Budgety/index.html">budgeting app</a></span></li><li><span><a id="a7" href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a id="a8" href="./Clock/index.html">clock</a></span></li><li><span><a id="a9" href="https://github.com/d1r1karsy/d1r1karsy.github.io" target="_blank">this portfolio</a></span></li><li><span><a id="a10">more coming soon...</a></span></li><li><span><a id = "a12" class="back">< back</a></span></li></div>');
+      document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a id="a6" href="./Budgety/index.html">budgeting app</a></span></li><li><span><a id="a7" href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a id="a8" href="./Clock/index.html">clock</a></span></li><li><span><a id="a9" href="https://github.com/d1r1karsy/d1r1karsy.github.io" target="_blank">this portfolio</a></span></li><li><span><a id="a10">more coming soon...</a></span></li><li><span><a id = "a11" class="back">< back</a></span></li></div>');
       document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
       for (var i = 6; i < 12; i++) {
         hover("a" + i);
