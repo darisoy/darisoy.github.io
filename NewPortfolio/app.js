@@ -24,8 +24,9 @@ function myReload(){
   location.reload();
 }
 
-siteSize();
 intro();
+siteSize();
+
 window.addEventListener("resize", siteSize);
 document.querySelector('.doruka').addEventListener('click', myReload);
 
