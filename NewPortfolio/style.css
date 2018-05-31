@@ -35,10 +35,6 @@ a{
   text-decoration: none;
 }
 
-/* #script {
-  display: block;
-} */
-
 #button{
   position: relative;
   color: white;
@@ -62,6 +58,7 @@ a{
 /* SIDEBAR */
 .sidebar  {
   position: fixed;
+  z-index: 10;
   left: 0px;
   right: 0px;
   height: 100%;
@@ -272,7 +269,7 @@ a{
 #proj {
   position: fixed;
   top: 0px;
-  left: 150px;
+  left: 60px;
   width: 100%;
   height: 100%;
   overflow: auto;
