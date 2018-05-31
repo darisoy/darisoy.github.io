@@ -26,8 +26,8 @@ function myReload(){
 
 intro();
 siteSize();
-
 window.addEventListener("resize", siteSize);
+document.addEventListener("touchstart", function(){}, true);
 document.querySelector('.doruka').addEventListener('click', myReload);
 
 document.getElementById('link1').addEventListener('click', function(){
