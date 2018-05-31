@@ -219,7 +219,7 @@ h2 {
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
-  border: 3px solid blue;
+  border: 3px solid black;
   background: transparent;
   position: absolute;
   top: -1000px;
