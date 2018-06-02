@@ -86,18 +86,18 @@
     num = Math.floor(Math.random() * pics) + 1;
     var url = document.querySelector(".logo").style.backgroundImage;
     if (url.includes("logo")) {
-      document.querySelector(".logo").style.backgroundImage = "url('Portfolio/logo/" + num + ".png')";
+      document.querySelector(".logo").style.backgroundImage = "url('logo/" + num + ".png')";
       document.getElementById("myPopup").style.backgroundColor = color;
     } else {
-      document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
+      document.querySelector(".logo").style.backgroundImage = "url('projects/"+ num + ".png')";
     }
   }
 
   //enters the links, goes between Doruk and Projects page
   function intro() {
-    document.querySelector(".links").insertAdjacentHTML('beforeend', '<div id="div1"><li><span><a href="./Portfolio/DorukArisoyResume.pdf" target="_blank" id="a1">resume</a></span></li><li><span><a id="a2" href="https://www.linkedin.com/in/dorukarisoy/" target="_blank">linkedin</a></span></li><li><span><a id="a3" class="projects">projects ></a></span></li><li><span><a id="a4" href="./Portfolio/DorukArisoyNetworkingPortfolio.pdf" target="_blank">networking portfolio</a></span></li><li class="popup"><span><a id="a5">contact</a></span><span class="popuptext" id="myPopup"></span></li></div>');
+    document.querySelector(".links").insertAdjacentHTML('beforeend', '<div id="div1"><li><span><a href="./DorukArisoyResume.pdf" target="_blank" id="a1">resume</a></span></li><li><span><a id="a2" href="https://www.linkedin.com/in/dorukarisoy/" target="_blank">linkedin</a></span></li><li><span><a id="a3" class="projects">projects ></a></span></li><li><span><a id="a4" href="./DorukArisoyNetworkingPortfolio.pdf" target="_blank">networking portfolio</a></span></li><li class="popup"><span><a id="a5">contact</a></span><span class="popuptext" id="myPopup"></span></li></div>');
     document.getElementById("myPopup").style.backgroundColor = color;
-    document.querySelector(".logo").style.backgroundImage = "url('Portfolio/logo/" + num + ".png')";
+    document.querySelector(".logo").style.backgroundImage = "url('logo/" + num + ".png')";
     document.querySelector(".popup").addEventListener("click", function() {
         document.getElementById("myPopup").classList.toggle("show");
     });
@@ -108,7 +108,7 @@
       var element = document.getElementById("div1");
       element.remove(element);
       document.querySelector(".links").insertAdjacentHTML('beforeend','<div id="div1"><li><span><a id="a6" href="./Budgety/index.html">budgeting app</a></span></li><li><span><a id="a7" href="./Pig-Game/index.html">pig-game</a></span></li><li><span><a id="a8" href="./Clock/index.html">clock</a></span></li><li><span><a id="a9" href="https://github.com/d1r1karsy/d1r1karsy.github.io" target="_blank">this portfolio</a></span></li><li><span><a id="a10">more coming soon...</a></span></li><li><span><a id = "a11" class="back">< back</a></span></li></div>');
-      document.querySelector(".logo").style.backgroundImage = "url('Portfolio/projects/"+ num + ".png')";
+      document.querySelector(".logo").style.backgroundImage = "url('projects/"+ num + ".png')";
       for (var i = 6; i < 12; i++) {
         hover("a" + i);
       }

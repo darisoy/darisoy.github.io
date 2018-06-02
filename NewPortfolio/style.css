@@ -9,9 +9,6 @@ body {
   left: 0px;
   top: 0px;
   position: fixed;
-  /* background-image: url("mountain.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 .background-image {
@@ -54,27 +51,26 @@ a{
   background-color: #2a5599;
 }
 
-.scrollbar {
-  position: fixed;
-  z-index: 10;
-  right: -5px;
-  top: 20px;
-  background-color: #494949;
-  opacity: 0.6;
+/* width */
+::-webkit-scrollbar {
   width: 10px;
+  opacity: 0.6;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #848484;
   height: 50%;
   border-radius: 10px;
-  transform: translate(-100%);
 }
 
-.scrollbar:hover {
-  opacity: 0.9;
-}
-
-.scrollbar:active {
+::-webkit-scrollbar-thumb:hover {
   border-radius: 0px;
-  width: 15px;
-  right: -10px;
+  background-color: #494949;
 }
 /* END OF WHOLE DOCUMENT */
 
@@ -337,16 +333,19 @@ a{
 }
 /* END OF SIDEBAR */
 
+/* CONTENT */
 #site {
   z-index: -1;
   position: relative;
   width: 750px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 #proj {
   position: fixed;
   top: 0px;
-  left: 60px;
+  left: 0px;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -369,6 +368,15 @@ a{
   position: relative;
   left: 5%;
   width: 90%;
+}
+/* END OF CONTENT */
+
+@media only screen and (max-width: 870px) {
+  #site {
+    width: 100%;
+    left: 60px;
+    transform: translate(0%);
+  }
 }
 
 
