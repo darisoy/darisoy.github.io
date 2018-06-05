@@ -1,0 +1,121 @@
+. {
+  content: "";
+  margin: 0px;
+  overflow: hidden;
+}
+body {
+  background-color: black;
+  z-index: -1;
+  font-family: 'Lato';
+  font-size: 50px;
+}
+
+.wave1 {
+  position: fixed;
+  z-index: 8;
+  width: 100%;
+  height: 50%;
+  top: 60%;
+  left: 0%;
+  background-color: #030fbc;
+}
+
+.wave1::after{
+  position: absolute;
+  content: "";
+  z-index: 9;
+  top: -80px;
+  left: 0px;
+  height: 100px;
+  width: 100%;
+  background-size: 110px 100px;
+  background-position: -5px -5px;
+  background-image: -webkit-radial-gradient(50% 100%, circle, #030fbc 48%, transparent 55%);
+  background-image: -moz-radial-gradient(50% 100%, circle, #030fbc 48%, transparent 55%);
+  background-image: radial-gradient(circle at 50% 100%, #030fbc 48%, transparent 55%);
+  -webkit-animation: side 3s;
+  animation: side 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.wave2 {
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  height: 50%;
+  top: 55%;
+  left: 0%;
+  background-color: #000882;
+}
+
+.wave2::after{
+  position: absolute;
+  content: "";
+  z-index: 7;
+  top: -80px;
+  left: 0px;
+  height: 100px;
+  width: 100%;
+  background-size: 110px 100px;
+  background-position: -5px -5px;
+  background-image: -webkit-radial-gradient(50% 100%, circle, #000882 48%, transparent 55%);
+  background-image: -moz-radial-gradient(50% 100%, circle, #000882 48%, transparent 55%);
+  background-image: radial-gradient(circle at 50% 100%, #000882 48%, transparent 55%);
+  -webkit-animation: side 3s;
+  animation: side 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+}
+
+
+#oops {
+  position: absolute;
+  z-index: 10;
+  left: 5%;
+  width: 90%;
+  top: 15%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transform: rotate(0deg);
+  -webkit-animation: rock 6s;
+  animation: rock 6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+}
+
+#oops:hover {
+  color: #d5ed7d;
+}
+
+@-webkit-keyframes side {
+  0% {background-position: -5px -5px;}
+  50% {background-position: -40px -5px;}
+  100% {background-position: -5px -5px;}
+}
+
+@keyframes side {
+  0% {background-position: -5px -5px;}
+  50% {background-position: -40px -5px;}
+  100% {background-position: -5px -5px;}
+}
+
+@-webkit-keyframes rock {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(5deg);}
+  50% {transform: rotate(0deg);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@keyframes rock {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(5deg);}
+  50% {transform: rotate(0deg);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
+}
