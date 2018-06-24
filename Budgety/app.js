@@ -80,7 +80,7 @@
 
   //displays new entrees
   function displayEntry(entr) {
-    var html, element, value
+    var html, element, value;
     if (entr.sign === 'inc') {
         element = ".income__list";
         value = "+ " + entr.value;
