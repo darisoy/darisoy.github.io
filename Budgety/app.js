@@ -80,7 +80,6 @@
 
   //displays new entrees
   function displayEntry(entr) {
-    updateExpPer();
     var html, element, value;
     if (entr.sign === 'inc') {
         element = ".income__list";
@@ -91,9 +90,9 @@
         element = ".expenses__list";
         value = "- " + entr.value;
         value += zeros(entr.value);
-        html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+        html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">%21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
     }
-    console.log("it ran");
+    updateExpPer();
     html = html.replace("%id%", entr.id);
     html = html.replace("%description%", entr.description);
     html = html.replace("%value%", value);
