@@ -196,6 +196,7 @@
 
   function checkCookie() {
     var decodedCookie = decodeURIComponent(document.cookie);
+    console.log(decodedCookie);
     if (decodedCookie != "") {
       var ca = decodedCookie.split(';');
       for (var i = 0; i < ca.length; i++) {
@@ -206,6 +207,7 @@
             overID = parseInt(cl[0]);
           }
           var c = cl[1].split(':');
+          console.log(c[1] + ", " + c[2] + ", " + c[3] + ", " + c[0]);
           addValue(new Entry(c[1], c[2], c[3], c[0]));
         }
       }
