@@ -93,6 +93,7 @@
         value += zeros(entr.value);
         html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
     }
+    console.log("it ran");
     html = html.replace("%id%", entr.id);
     html = html.replace("%description%", entr.description);
     html = html.replace("%value%", value);
@@ -101,18 +102,18 @@
 
   //deletes entries
   document.querySelector(".container").addEventListener('click', function() {
-    var item = event.target.parentNode.parentNode.parentNode.parentNode.id
-    var splitID, type, ID;
+    var item = event.target.parentNode.parentNode.parentNode.parentNode.id;
+    var splitID, type, idd;
     if (item) {
         splitID = item.split('-');
         type = splitID[0];
-        ID = parseInt(splitID[1]);
+        idd = parseInt(splitID[1]);
         var el = document.getElementById(item);
         el.parentNode.removeChild(el);
 
         var value;
         for (var i = 0; i < valAll.length; i++) {
-          if (valAll[i].id == ID) {
+          if (valAll[i].id == idd) {
             value = valAll[i].value;
             valAll.splice(i, 1);
           }
@@ -128,7 +129,7 @@
         calcPercentage();
         calcAvBudget();
 
-        document.cookie = ID + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        document.cookie = idd + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
 
   });
