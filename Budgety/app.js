@@ -80,6 +80,7 @@
 
   //displays new entrees
   function displayEntry(entr) {
+    updateExpPer();
     var html, element, value;
     if (entr.sign === 'inc') {
         element = ".income__list";
@@ -96,7 +97,6 @@
     html = html.replace("%description%", entr.description);
     html = html.replace("%value%", value);
     document.querySelector(element).insertAdjacentHTML('beforeend', html);
-    updateExpPer();
   }
 
   //deletes entries
