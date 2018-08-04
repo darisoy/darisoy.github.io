@@ -1,0 +1,487 @@
+body {
+  text-align: center;
+  font-family: "Arial Black", Gadget, sans-serif;
+  background-color: Black;
+  color: white;
+  position: relative;
+}
+
+#top {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background-color: #097DBC;
+  width: 100%;
+  padding: 15px;
+}
+
+#bottom {
+  padding-top: 150px;
+  position: relative;
+  z-index: initial;
+}
+
+#logo {
+  position: relative;
+  left: 0%;
+  top: 0%;
+  width: 200px;
+  height: 75px;
+  background-color: transparent;
+  margin: 10px;
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: left;
+  display: inline-block;
+}
+
+#em {
+  position: relative;
+  display: inline-block;
+  font-size: 28px;
+  text-align: left;
+  float: left;
+  left: 180px;
+}
+
+#title {
+  position: fixed;
+  left: 0%;
+  top: 115px;
+  width: 100%;
+  color: black;
+  background-color: white;
+  text-align: left;
+  font-size: 3vw;
+}
+
+#instructions {
+  position: relative;
+  background: #8B1001;
+  text-align: left;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 15px;
+  border-style: solid;
+  border-color: #8B1001;
+  border-width: 0px 5px 0.1px 5px;
+  border-radius: 5px;
+  font-size: 2vw;
+}
+
+#cellular {
+  color: white;
+  position: relative;
+  top: 50%;
+  margin-top: 14vw;
+  left: 43%;
+  width:  6vw;
+  height: 6vw;
+  border-radius: 50%;
+  border-top: solid 1vw currentColor;
+  border-right: solid 1vw transparent;
+  border-bottom: solid 1vw transparent;
+  border-left: solid 1vw transparent;
+}
+
+#cellular:before {
+  content: '';
+  position: absolute;
+  left: -5vw;
+  top: -5vw;
+  width: 14vw;
+  height: 14vw;
+  border-radius: 50%;
+  border-top: solid 1vw currentColor;
+  border-right: solid 1vw transparent;
+  border-bottom: solid 1vw transparent;
+  border-left: solid 1vw transparent;
+}
+
+#cellular:after {
+  content: '';
+  position: absolute;
+  left: -9vw;
+  top: -9vw;
+  width: 22vw;
+  height: 22vw;
+  border-radius: 50%;
+  border-top: solid 1vw currentColor;
+  border-right: solid 1vw transparent;
+  border-bottom: solid 1vw transparent;
+  border-left: solid 1vw transparent;
+}
+
+#cellular:hover {
+  -webkit-animation-name: cellani1;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: cellani1;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+#cellular:hover:before {
+  -webkit-animation-name: cellani2;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: cellani2;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+#cellular:hover:after {
+  -webkit-animation-name: cellani3;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: cellani3;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes cellani1 {
+  0%   {border-top: solid 1vw white;}
+  25%  {border-top: solid 1vw #A7A9AB;}
+  50%  {border-top: solid 1vw white;}
+  75%  {border-top: solid 1vw white;}
+  100% {border-top: solid 1vw white;}
+}
+
+@keyframes cellani1 {
+  0%   {border-top: solid 1vw white;}
+  25%  {border-top: solid 1vw #A7A9AB;}
+  50%  {border-top: solid 1vw white;}
+  75%  {border-top: solid 1vw white;}
+  100% {border-top: solid 1vw white;}
+}
+
+@-webkit-keyframes cellani2 {
+  0%   {border-top: solid 1vw white;}
+  25%  {border-top: solid 1vw white;}
+  50%  {border-top: solid 1vw #A7A9AB;}
+  75%  {border-top: solid 1vw white;}
+  100% {border-top: solid 1vw white;}
+}
+
+@keyframes cellani2 {
+  0%   {border-top: solid 1vw white;}
+  25%  {border-top: solid 1vw white;}
+  50%  {border-top: solid 1vw #A7A9AB;}
+  75%  {border-top: solid 1vw white;}
+  100% {border-top: solid 1vw white;}
+}
+
+@-webkit-keyframes cellani3 {
+  0%   {border-top: solid 1vw white;}
+  25%  {border-top: solid 1vw white;}
+  50%  {border-top: solid 1vw white;}
+  75%  {border-top: solid 1vw #A7A9AB;}
+  100% {border-top: solid 1vw white;}
+}
+
+@keyframes cellani3 {
+  0%   {border-top: solid 1vw white;}
+  25%  {border-top: solid 1vw white;}
+  50%  {border-top: solid 1vw white;}
+  75%  {border-top: solid 1vw #A7A9AB;}
+  100% {border-top: solid 1vw white;}
+}
+
+#c {
+  position: relative;
+  top: 2vw;
+  float: left;
+  display: inline-block;
+  font-size: 2vw;
+  left: -1vw;
+}
+
+#cellular:hover > #c {
+  color: #A7A9AB;
+}
+
+#mark{
+  color: white;
+  position: relative;
+  margin-left: 3px;
+  margin-top: 4px;
+  width: 14px;
+  height: 8px;
+  border-bottom: solid 1px currentColor;
+  border-left: solid 1px currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  float: left;
+  display: inline-block;
+  bottom: 0%;
+  left: -50%;
+}
+
+#w {
+  position: relative;
+  top: 6vw;
+  font-size: 2vw;
+}
+
+#wired:hover > #w {
+  color: #A7A9AB;
+}
+
+#wired {
+  position: relative;
+  color: white;
+  top: 50%;
+  left: 39%;
+  margin-top: 10vw;
+  width: 11vw;
+  height: 5vw;
+  border-top: solid 1vw white;
+  border-left: solid 1vw white;
+  border-right: solid 1vw white;
+}
+
+#wired:before {
+  display: block;
+  position: absolute;
+  left: 5vw;
+  top: -6vw;
+  width: 1vw;
+  content: "";
+  height: 11vw;
+  background-color: white;
+}
+
+#wired:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  background-color: white;
+  left: -2vw;
+  top: 3vw;
+  box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 white, 12vw 0 0 0 white;
+}
+
+#wired:hover:after {
+  -webkit-animation-name: wiredani;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: wiredani;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes wiredani {
+  0%   {background-color: white; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 white, 12vw 0 0 0 white;}
+  20%  {background-color: #A7A9AB; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 white, 12vw 0 0 0 white;}
+  40%  {background-color: white; box-shadow: 6vw 0 0 0 #A7A9AB, 6vw -10vw 0 0 white, 12vw 0 0 0 white;}
+  60%  {background-color: white; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 white, 12vw 0 0 0 #A7A9AB;}
+  80% {background-color: white; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 #A7A9AB, 12vw 0 0 0 white;}
+  100% {background-color: white; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 white, 12vw 0 0 0 white;}
+}
+
+@keyframes wiredani {
+  0%   {background-color: white; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 white, 12vw 0 0 0 white;}
+  20%  {background-color: #A7A9AB; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 white, 12vw 0 0 0 white;}
+  40%  {background-color: white; box-shadow: 6vw 0 0 0 #A7A9AB, 6vw -10vw 0 0 white, 12vw 0 0 0 white;}
+  60%  {background-color: white; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 white, 12vw 0 0 0 #A7A9AB;}
+  80% {background-color: white; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 #A7A9AB, 12vw 0 0 0 white;}
+  100% {background-color: white; box-shadow: 6vw 0 0 0 white, 6vw -10vw 0 0 white, 12vw 0 0 0 white;}
+}
+
+@media only screen and (min-width: 800px) {
+  #cellular {
+    float: left;
+    display: inline-block;
+    left: 25%;
+  }
+  #wired {
+    float: left;
+    display: inline-block;
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #bottom{
+    height: 750px;
+  }
+  #w {
+    font-size: 18px;
+    top: 60px;
+  }
+  #c {
+    font-size: 18px;
+  }
+  #cellular {
+    margin-top: 140px;
+    width:  60px;
+    height: 60px;
+    border-top: solid 10px currentColor;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+    border-left: solid 10px transparent;
+  }
+  #cellular:before {
+    left: -50px;
+    top: -50px;
+    width: 140px;
+    height: 140px;
+    border-top: solid 10px currentColor;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+    border-left: solid 10px transparent;
+  }
+  #cellular:after {
+    left: -90px;
+    top: -90px;
+    width: 220px;
+    height: 220px;
+    border-top: solid 10px currentColor;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+    border-left: solid 10px transparent;
+  }
+  @-webkit-keyframes cellani1 {
+    0%   {border-top: solid 10px white;}
+    25%  {border-top: solid 10px #A7A9AB;}
+    50%  {border-top: solid 10px white;}
+    75%  {border-top: solid 10px white;}
+    100% {border-top: solid 10px white;}
+  }
+  @keyframes cellani1 {
+    0%   {border-top: solid 10px white;}
+    25%  {border-top: solid 10px #A7A9AB;}
+    50%  {border-top: solid 10px white;}
+    75%  {border-top: solid 10px white;}
+    100% {border-top: solid 10px white;}
+  }
+  @-webkit-keyframes cellani2 {
+    0%   {border-top: solid 10px white;}
+    25%  {border-top: solid 10px white;}
+    50%  {border-top: solid 10px #A7A9AB;}
+    75%  {border-top: solid 10px white;}
+    100% {border-top: solid 10px white;}
+  }
+  @keyframes cellani2 {
+    0%   {border-top: solid 10px white;}
+    25%  {border-top: solid 10px white;}
+    50%  {border-top: solid 10px #A7A9AB;}
+    75%  {border-top: solid 10px white;}
+    100% {border-top: solid 10px white;}
+  }
+  @-webkit-keyframes cellani3 {
+    0%   {border-top: solid 10px white;}
+    25%  {border-top: solid 10px white;}
+    50%  {border-top: solid 10px white;}
+    75%  {border-top: solid 10px #A7A9AB;}
+    100% {border-top: solid 10px white;}
+  }
+  @keyframes cellani3 {
+    0%   {border-top: solid 10px white;}
+    25%  {border-top: solid 10px white;}
+    50%  {border-top: solid 10px white;}
+    75%  {border-top: solid 10px #A7A9AB;}
+    100% {border-top: solid 10px white;}
+  }
+  #wired {
+    margin-top: 100px;
+    width: 110px;
+    height: 50px;
+    border-top: solid 10px white;
+    border-left: solid 10px white;
+    border-right: solid 10px white;
+  }
+  #wired:before {
+    left: 50px;
+    top: -60px;
+    width: 10px;
+    height: 110px;
+  }
+  #wired:after {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: -20px;
+    top: 30px;
+    box-shadow: 60px 0 0 0 white, 60px -100px 0 0 white, 120px 0 0 0 white;
+  }
+  @-webkit-keyframes wiredani {
+    0%   {background-color: white; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 white, 120px 0 0 0 white;}
+    20%  {background-color: #A7A9AB; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 white, 120px 0 0 0 white;}
+    40%  {background-color: white; box-shadow: 60px 0 0 0 #A7A9AB, 60px -100px 0 0 white, 120px 0 0 0 white;}
+    60%  {background-color: white; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 white, 120px 0 0 0 #A7A9AB;}
+    80% {background-color: white; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 #A7A9AB, 120px 0 0 0 white;}
+    100% {background-color: white; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 white, 120px 0 0 0 white;}
+  }
+  @keyframes wiredani {
+    0%   {background-color: white; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 white, 120px 0 0 0 white;}
+    20%  {background-color: #A7A9AB; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 white, 120px 0 0 0 white;}
+    40%  {background-color: white; box-shadow: 60px 0 0 0 #A7A9AB, 60px -100px 0 0 white, 120px 0 0 0 white;}
+    60%  {background-color: white; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 white, 120px 0 0 0 #A7A9AB;}
+    80% {background-color: white; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 #A7A9AB, 120px 0 0 0 white;}
+    100% {background-color: white; box-shadow: 60px 0 0 0 white, 60px -100px 0 0 white, 120px 0 0 0 white;}
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #title {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #title {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  #instructions {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #instructions {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  #em {
+    font-size: 6vw;
+  }
+}
+
+.stat {
+  bottom: 20px;
+  left: -40px;
+  color: green;
+  position: absolute;
+  margin-left: 0.6vw;
+  margin-top: 0.8vw;
+  width: 2.8vw;
+  height: 1.6vw;
+  border-bottom: solid 0.2vw currentColor;
+  border-left: solid 0.2vw currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.current {
+  border-color: red;
+  border-width: 10px;
+}
