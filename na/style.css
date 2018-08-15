@@ -1,0 +1,34 @@
+body {
+
+}
+
+.bar {
+  position: relative;
+  background-color: white;
+  left: 0px;
+  top: 30px;
+  width: 100%;
+  height: 80px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.button{
+  position: relative;
+  color: black;
+  background-color: white;
+  border-radius: 2px;
+  padding: 7px;
+  width: 75px;
+  float: left;
+}
+
+.button:hover {
+  color: white;
+  box-shadow: 0 4px 2px rgba(255, 255, 255, 0.3);
+  background-color: #8B1001;
+}
+
+.button:active {
+  color: grey;
+}
