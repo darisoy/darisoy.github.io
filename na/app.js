@@ -21,12 +21,25 @@
 
     document.getElementById('button1').addEventListener("click", function(){
       document.getElementById('corans').style.display = "block";
-        document.getElementById('corans').innerHTML = "Correct answer: " + res;
+      document.getElementById('corans').innerHTML = "Correct answer: " + res;
     });
+
+    document.addEventListener('keypress', function(event) {
+      if (event.keyCode === 13 || event.which === 13) {
+        document.getElementById('corans').style.display = "block";
+        document.getElementById('corans').innerHTML = "Correct answer: " + res;
+      }
+    }
   }
   newq();
   document.getElementById('button2').addEventListener("click", newq);
   document.getElementById('button2').addEventListener("click", function(){
     document.getElementById('corans').style.display = "none";
   });
+  document.addEventListener('keypress', function(event) {
+    if (event.keyCode === 39 || event.which === 39) {
+      newq();
+      document.getElementById('corans').style.display = "none";
+    }
+  }
 }
