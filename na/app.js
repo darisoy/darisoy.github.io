@@ -41,5 +41,5 @@
       newq();
       document.getElementById('corans').style.display = "none";
     }
-  }
+  });
 }
