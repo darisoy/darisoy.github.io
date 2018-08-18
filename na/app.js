@@ -29,7 +29,7 @@
         document.getElementById('corans').style.display = "block";
         document.getElementById('corans').innerHTML = "Correct answer: " + res;
       }
-    }
+    });
   }
   newq();
   document.getElementById('button2').addEventListener("click", newq);
