@@ -2,17 +2,6 @@ body {
 
 }
 
-.bar {
-  position: relative;
-  background-color: white;
-  left: 0px;
-  top: 30px;
-  width: 100%;
-  height: 80px;
-  font-size: 20px;
-  text-align: center;
-}
-
 .button{
   position: relative;
   color: black;
@@ -37,12 +26,14 @@ body {
   position: fixed;
   bottom: 0%;
   left: 0%;
+  font-size: 20px;
 }
 
 #button2 {
   position: fixed;
   bottom: 0%;
   right: 0%;
+  font-size: 20px;
 }
 
 #question {
@@ -51,4 +42,10 @@ body {
 
 #corans {
   position: relative;
+  float: left;
+}
+
+#current {
+  display: block;
+  float: right;
 }

@@ -17,12 +17,12 @@
     document.getElementById('question').innerHTML = "Question (" + (q + 1) + "):&nbsp;&nbsp;&nbsp;&nbsp;" + curq;
     res = cura[0] + "<br>";
     for (var i = 1; i < cura.length; i++) {
-      res += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + cura[i] + "<br>";
+      res += cura[i] + "<br>";
     }
 
     document.getElementById('button1').addEventListener("click", function(){
       document.getElementById('corans').style.display = "block";
-      document.getElementById('corans').innerHTML = "Correct answer: " + res;
+      document.getElementById('current').innerHTML = res;
     });
   }
 
@@ -38,11 +38,9 @@
       if (!enter) {
         newq();
         document.getElementById('corans').style.display = "none";
-        console.log("1");
       } else {
         document.getElementById('corans').style.display = "block";
-        document.getElementById('corans').innerHTML = "Correct answer: " + res;
-        console.log("2");
+        document.getElementById('current').innerHTML = res;
       }
       enter = !enter;
     }
