@@ -32,3 +32,23 @@ body {
 .button:active {
   color: grey;
 }
+
+#button1 {
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+}
+
+#button2 {
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+}
+
+#question {
+  position: relative;
+}
+
+#corans {
+  position: relative;
+}
