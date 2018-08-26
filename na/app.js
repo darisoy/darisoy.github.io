@@ -30,11 +30,11 @@
     });
 
     var graph = "";
-    var color = ["red", "green", "blue", "grey", "black", "pruple", "brown"];
+    var color = ["red", "green", "blue", "grey", "black", "purple", "brown", "pink", "olive", "teal"];
     for (var i = 0; i < solv.length; i++) {
       if (solv[i] != 0) {
         var perc = (solv[i] / total) * 100;
-        graph += "<div style=\"height: 15px; width: " + perc + "%; background-color: " + color[i % color.length] + "; float: left;\">" + (i + 1) + "</div>"
+        graph += "<div style=\"height: 15px; width: " + perc + "%; background-color: " + color[i % 10] + "; float: left;\">" + (i + 1) + "</div>"
       }
     }
     document.getElementById("solved").innerHTML = graph;
