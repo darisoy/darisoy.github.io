@@ -50,3 +50,16 @@ body {
   float: right;
   margin-left: 5px;
 }
+
+#solved {
+  position: relative;
+  width: 96%;
+  height: 15px;
+  font-size: 15px;
+  color: white;
+  background-color: red;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
