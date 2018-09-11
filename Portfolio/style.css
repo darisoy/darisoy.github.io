@@ -86,12 +86,6 @@ a{
   box-shadow: 5px 0px 2px rgba(0, 0, 0, 0.3);
 }
 
-.sidebar:hover, .sidebar:active{
-  -webkit-animation: sideIn 0.25s;
-  animation: sideIn 0.25s;
-  width: 150px;
-}
-
 .doruk {
   left: 0%;
   top: 7px;
@@ -103,18 +97,6 @@ a{
   width: 100%;
   display: block;
   letter-spacing: 1.5px;
-}
-
-.sidebar:hover > .doruk {
-  -webkit-animation: fadeOut 0.25s;
-  animation: fadeOut 0.25s;
-  display: none;
-}
-
-.sidebar:active > .doruk {
-  -webkit-animation: fadeOut 0.25s;
-  animation: fadeOut 0.25s;
-  display: none;
 }
 
 .doruka {
@@ -138,18 +120,6 @@ a{
   background-color: #262626;
 }
 
-.sidebar:hover > .doruka {
-  -webkit-animation: fadeIn 0.25s;
-  animation: fadeIn 0.25s;
-  display: block;
-}
-
-.sidebar:active > .doruka {
-  -webkit-animation: fadeIn 0.25s;
-  animation: fadeIn 0.25s;
-  display: block;
-}
-
 #box {
   position: relative;
   width: 100%
@@ -160,18 +130,6 @@ a{
   color: white;
   text-align: center;
   font-size: 0px;
-}
-
-.sidebar:hover > #box {
-  -webkit-animation: bigger 0.25s;
-  animation: bigger 0.25s;
-  font-size: 35px;
-}
-
-.sidebar:active > #box {
-  -webkit-animation: bigger 0.25s;
-  animation: bigger 0.25s;
-  font-size: 35px;
 }
 
 .line {
@@ -185,23 +143,8 @@ a{
   display: block;
 }
 
-.sidebar:hover > #box > .line{
-  -webkit-animation: fadeOut 0.25s;
-  animation: fadeOut 0.25s;
-  opacity: 0;
-  display: block;
-}
-
-.sidebar:active > #box > .line{
-  -webkit-animation: fadeOut 0.25s;
-  animation: fadeOut 0.25s;
-  opacity: 0;
-  display: block;
-}
-
 #a {
   top: 32%;
-  opacity: 1;
 }
 
 #b {
@@ -236,20 +179,6 @@ a{
   background-color: #262626;
 }
 
-.sidebar:hover > #link1{
-  display: block;
-  -webkit-animation: slideIn 0.35s;
-  animation: slideIn 0.35s;
-  left: 10px;
-}
-
-.sidebar:active > #link1{
-  display: block;
-  -webkit-animation: slideIn 0.35s;
-  animation: slideIn 0.35s;
-  left: 10px;
-}
-
 #link2 {
   top: 70px;
   width: 85px;
@@ -262,21 +191,6 @@ a{
 #link2:active {
   background-color: #262626;
 }
-
-.sidebar:hover > #link2{
-  display: block;
-  -webkit-animation: slideIn 0.45s;
-  animation: slideIn 0.45s;
-  left: 10px;
-}
-
-.sidebar:active > #link2{
-  display: block;
-  -webkit-animation: slideIn 0.45s;
-  animation: slideIn 0.45s;
-  left: 10px;
-}
-
 
 #link3 {
   top: 80px;
@@ -291,20 +205,6 @@ a{
   background-color: #262626;
 }
 
-.sidebar:hover > #link3{
-  display: block;
-  -webkit-animation: slideIn 0.55s;
-  animation: slideIn 0.55s;
-  left: 10px;
-}
-
-.sidebar:active > #link3{
-  display: block;
-  -webkit-animation: slideIn 0.55s;
-  animation: slideIn 0.55s;
-  left: 10px;
-}
-
 #link4 {
   top: 90px;
   width: 112px;
@@ -316,20 +216,6 @@ a{
 
 #link4:active {
   background-color: #262626;
-}
-
-.sidebar:hover > #link4{
-  display: block;
-  -webkit-animation: slideIn 0.65s;
-  animation: slideIn 0.65s;
-  left: 10px;
-}
-
-.sidebar:active > #link4{
-  display: block;
-  -webkit-animation: slideIn 0.65s;
-  animation: slideIn 0.65s;
-  left: 10px;
 }
 /* END OF SIDEBAR */
 
@@ -379,6 +265,138 @@ a{
   }
 }
 
+@media only screen and (min-width: 1100px) {
+  .sidebar {
+    width: 150px;
+  }
+  .doruk {
+    display: none;
+  }
+  .doruka {
+    display: block;
+  }
+  #box {
+    font-size: 35px;
+  }
+  .line{
+    opacity: 0;
+    display: block;
+  }
+  #link1{
+    display: block;
+    left: 10px;
+  }
+  #link2{
+    display: block;
+    left: 10px;
+  }
+  #link3{
+    display: block;
+    left: 10px;
+  }
+  #link4{
+    display: block;
+    left: 10px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .sidebar:hover, .sidebar:active{
+    -webkit-animation: sideIn 0.25s;
+    animation: sideIn 0.25s;
+    width: 150px;
+  }
+  .sidebar:hover > .doruk {
+    -webkit-animation: fadeOut 0.25s;
+    animation: fadeOut 0.25s;
+    display: none;
+  }
+  .sidebar:active > .doruk {
+    -webkit-animation: fadeOut 0.25s;
+    animation: fadeOut 0.25s;
+    display: none;
+  }
+  .sidebar:hover > .doruka {
+    -webkit-animation: fadeIn 0.25s;
+    animation: fadeIn 0.25s;
+    display: block;
+  }
+  .sidebar:active > .doruka {
+    -webkit-animation: fadeIn 0.25s;
+    animation: fadeIn 0.25s;
+    display: block;
+  }
+  .sidebar:hover > #box {
+    -webkit-animation: bigger 0.25s;
+    animation: bigger 0.25s;
+    font-size: 35px;
+  }
+  .sidebar:active > #box {
+    -webkit-animation: bigger 0.25s;
+    animation: bigger 0.25s;
+    font-size: 35px;
+  }
+  .sidebar:hover > #box > .line{
+    -webkit-animation: fadeOut 0.25s;
+    animation: fadeOut 0.25s;
+    opacity: 0;
+    display: block;
+  }
+  .sidebar:active > #box > .line{
+    -webkit-animation: fadeOut 0.25s;
+    animation: fadeOut 0.25s;
+    opacity: 0;
+    display: block;
+  }
+  .sidebar:hover > #link1{
+    display: block;
+    -webkit-animation: slideIn 0.35s;
+    animation: slideIn 0.35s;
+    left: 10px;
+  }
+  .sidebar:active > #link1{
+    display: block;
+    -webkit-animation: slideIn 0.35s;
+    animation: slideIn 0.35s;
+    left: 10px;
+  }
+  .sidebar:hover > #link2{
+    display: block;
+    -webkit-animation: slideIn 0.45s;
+    animation: slideIn 0.45s;
+    left: 10px;
+  }
+  .sidebar:active > #link2{
+    display: block;
+    -webkit-animation: slideIn 0.45s;
+    animation: slideIn 0.45s;
+    left: 10px;
+  }
+  .sidebar:hover > #link3{
+    display: block;
+    -webkit-animation: slideIn 0.55s;
+    animation: slideIn 0.55s;
+    left: 10px;
+  }
+  .sidebar:active > #link3{
+    display: block;
+    -webkit-animation: slideIn 0.55s;
+    animation: slideIn 0.55s;
+    left: 10px;
+  }
+  .sidebar:hover > #link4{
+    display: block;
+    -webkit-animation: slideIn 0.65s;
+    animation: slideIn 0.65s;
+    left: 10px;
+  }
+  .sidebar:active > #link4{
+    display: block;
+    -webkit-animation: slideIn 0.65s;
+    animation: slideIn 0.65s;
+    left: 10px;
+  }
+}
 
 /* ANIMATIONS */
 @-webkit-keyframes sideIn {
