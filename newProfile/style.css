@@ -1,0 +1,125 @@
+body {
+    font-family: 'Open Sans';
+    font-size: 28px;
+    background-color: white;
+}
+
+.border {
+    position: absolute;
+    top: 20%;
+    left: 13.5%;
+    bottom: 25%;
+    background-color: inherit;
+}
+
+#doruk {
+    font-size: 70px;
+    color: #8E8E8E;
+}
+
+#u {
+    color: #B71B1B;
+    background-color: white;
+    border-radius: 2px;
+}
+
+#doruk:hover #u {
+    color: #eaeaea;
+    background-color: #B71B1B;
+    -webkit-animation: fade 0.7s;
+    animation: fade 0.7s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fade {
+  0% {color: #B71B1B; background-color: white;}
+  100% {color: #eaeaea; background-color: #B71B1B;}
+}
+@keyframes fade {
+  0% {color: #B71B1B; background-color: white;}
+  100% {color: #eaeaea; background-color: #B71B1B;}
+}
+
+.box {
+    position: relative;
+    top: 77px;
+    left: 12px;
+    color: #ADADAD;
+}
+
+#link1 {
+    margin-bottom: 10px;
+}
+#link1:hover{
+    color: #fea3aa;
+    -webkit-animation: fade1 0.2s;
+    animation: fade1 0.2s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+@-webkit-keyframes fade1 {
+  0% {color: #ADADAD;}
+  100% {color: #fea3aa;}
+}
+@keyframes fade1 {
+  0% {color: #ADADAD;}
+  100% {color: #fea3aa;}
+}
+
+#link2 {
+    margin-bottom: 10px;
+}
+#link2:hover{
+    color: #b2cefe;
+    -webkit-animation: fade2 0.2s;
+    animation: fade2 0.2s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+@-webkit-keyframes fade2 {
+  0% {color: #ADADAD;}
+  100% {color: #b2cefe;}
+}
+@keyframes fade2 {
+  0% {color: #ADADAD;}
+  100% {color: #b2cefe;}
+}
+
+#link3 {
+    margin-bottom: 10px;
+}
+#link3:hover{
+    color: #f8b88b;
+    -webkit-animation: fade3 0.2s;
+    animation: fade3 0.2s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+@-webkit-keyframes fade3 {
+  0% {color: #ADADAD;}
+  100% {color: #f8b88b;}
+}
+@keyframes fade3 {
+  0% {color: #ADADAD;}
+  100% {color: #f8b88b;}
+}
+
+#link4 {
+    margin-bottom: 10px;
+}
+#link4:hover{
+    color: #baed91;
+    -webkit-animation: fade4 0.2s;
+    animation: fade4 0.2s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+@-webkit-keyframes fade4 {
+  0% {color: #ADADAD;}
+  100% {color: #baed91;}
+}
+@keyframes fade4 {
+  0% {color: #ADADAD;}
+  100% {color: #baed91;}
+}
