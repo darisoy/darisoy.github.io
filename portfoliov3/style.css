@@ -1,27 +1,27 @@
 body {
-    font-family: 'Open Sans';
-    font-size: 28px;
-    background-color: #fcfcfc;
+  font-family: 'Open Sans';
+  font-size: 28px;
+  background-color: #fcfcfc;
 }
 
 .border {
-    position: absolute;
-    top: 20%;
-    left: 13.5%;
-    width: 73%;
-    bottom: 25%;
-    background-color: inherit;
+  position: absolute;
+  top: 20%;
+  left: 13.5%;
+  width: 73%;
+  bottom: 25%;
+  background-color: inherit;
 }
 
 #doruk {
-    font-size: 70px;
-    color: #8E8E8E;
+  font-size: 70px;
+  color: #8E8E8E;
 }
 
 #u {
-    color: #B71B1B;
-    background-color: white;
-    border-radius: 2px;
+  color: #B71B1B;
+  background-color: transparent;
+  border-radius: 2px;
 }
 
 #doruk:hover #u {
@@ -43,21 +43,33 @@ body {
 }
 
 .box {
-    position: relative;
-    top: 77px;
-    left: 12px;
-    color: #ADADAD;
-
+  position: relative;
+  top: 77px;
+  left: 50%;
+  color: #ADADAD;
+  width: 920px;
+  transform: translateX(-50%);
 }
 
 .box-link {
-    margin-bottom: 10px;
-    text-decoration: none;
+  margin-bottom: 10px;
+  position: relative;
+  text-decoration: none;
+  top: 77px;
+  color: #ADADAD;
+  left: 12px;
+}
+
+.box-header {
+  margin-bottom: 10px;
+  position: relative;
+  text-decoration: none;
+  color: #ADADAD;
 }
 
 #link1 {
-    text-decoration: none;
-    color: #ADADAD;
+  text-decoration: none;
+  color: #ADADAD;
 }
 #link1:visited {
     margin-bottom: inherit;
@@ -162,8 +174,8 @@ body {
 .proj {
     position: relative;
     background-color: #f2f2f2;
-    width: 65%;
-    left: 13.5%;
+    width: 95%;
+    left: 0%;
     border-color: #d1d1d1;
     border-radius: 10px;
     border-width: 2px;
