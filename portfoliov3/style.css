@@ -102,7 +102,7 @@ h2 {
   text-decoration: inherit;
 }
 #link1:hover{
-  color: #fea3aa;
+  color: #e9848d;
   -webkit-animation: fade1 0.3s;
   animation: fade1 0.3s;
   -webkit-animation-iteration-count: 1;
@@ -110,11 +110,11 @@ h2 {
 }
 @-webkit-keyframes fade1 {
   0% {color: inherit;}
-  100% {color: #fea3aa;}
+  100% {color: #e9848d;}
 }
 @keyframes fade1 {
   0% {color: inherit;}
-  100% {color: #fea3aa;}
+  100% {color: #e9848d;}
 }
 
 #link2 {
@@ -128,7 +128,7 @@ h2 {
   text-decoration: inherit;
 }
 #link2:hover{
-  color: #b2cefe;
+  color: #6fa0f5;
   -webkit-animation: fade2 0.3s;
   animation: fade2 0.3s;
   -webkit-animation-iteration-count: 1;
@@ -136,11 +136,11 @@ h2 {
 }
 @-webkit-keyframes fade2 {
   0% {  color: inherit;}
-  100% {color: #b2cefe;}
+  100% {color: #6fa0f5;}
 }
 @keyframes fade2 {
   0% {  color: inherit;}
-  100% {color: #b2cefe;}
+  100% {color: #6fa0f5;}
 }
 
 #link3 {
@@ -154,7 +154,7 @@ h2 {
   text-decoration: inherit;
 }
 #link3:hover{
-  color: #f8b88b;
+  color: #f59753;
   -webkit-animation: fade3 0.3s;
   animation: fade3 0.3s;
   -webkit-animation-iteration-count: 1;
@@ -162,11 +162,11 @@ h2 {
 }
 @-webkit-keyframes fade3 {
   0% {  color: inherit;}
-  100% {color: #f8b88b;}
+  100% {color: #f59753;}
 }
 @keyframes fade3 {
   0% {  color: inherit;}
-  100% {color: #f8b88b;}
+  100% {color: #f59753;}
 }
 
 #link4 {
@@ -180,7 +180,7 @@ h2 {
   text-decoration: inherit;
 }
 #link4:hover{
-  color: #baed91;
+  color: #95c46f;
   -webkit-animation: fade4 0.3s;
   animation: fade4 0.3s;
   -webkit-animation-iteration-count: 1;
@@ -188,11 +188,11 @@ h2 {
 }
 @-webkit-keyframes fade4 {
   0% {color: inherit;}
-  100% {color: #baed91;}
+  100% {color: #95c46f;}
 }
 @keyframes fade4 {
   0% {color: inherit;}
-  100% {color: #baed91;}
+  100% {color: #95c46f;}
 }
 
 .proj {
@@ -303,4 +303,9 @@ nav[data-toggle=toc] .nav .nav>li>.active:hover {
 }
 nav[data-toggle=toc] .nav-link.active+ul {
   display:block
+}
+
+iframe {
+  height: 500px;
+  width: 500px;
 }
