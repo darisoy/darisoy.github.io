@@ -73,6 +73,7 @@ h2 {
   left: 870px;
   width: 920px;
   transform: translateX(-50%);
+  float: left;
 }
 
 .box-link {
@@ -303,9 +304,4 @@ nav[data-toggle=toc] .nav .nav>li>.active:hover {
 }
 nav[data-toggle=toc] .nav-link.active+ul {
   display:block
-}
-
-iframe {
-  height: 500px;
-  width: 500px;
 }
