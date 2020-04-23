@@ -3,73 +3,53 @@
     const height = window.innerHeight-10
     
     const canvas = SVG().addTo('svg')
-    const color = '#ffffff'
+    const color = '#f7f7f7'
     const w = 7
+    const circlesize = 15
 
-    var circle1 = canvas.circle(15).move(10-15/2, 110-15/2)
-    circle1.fill(color)
-    circle1.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+    animateCircle([[60, 310], [60, 260], [10, 200], [10, 110]])
+    animateCircle([[60, 310], [60, 130], [100, 100], [280, 100], [280, 55], [325, 10], [410, 10]])
+    animateCircle([[105, 310], [105, 160], [135, 130]])
+    animateCircle([[185, 310], [185, 280], [155, 260], [155, 180], [200, 140], [340, 140], [340, 70], [410, 70]])
+    animateCircle([[230, 310], [230, 190], [360, 190], [410, 230]])
+    animateCircle([[230, 310], [230, 280], [280, 220]])
+    animateCircle([[305, 310], [305, 270], [340, 240], [340, 310]])
 
-    var circle2 = canvas.circle(15).move(200-15/2, 100-15/2)
-    circle2.fill(color)
-    circle2.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+    function animateCircle(array) {
+        generatePath(array)
+        var circle = generateCircle(array)
+        setInterval(() => {
+            animation(circle, array)
+        }, 100)
+    }
 
-    var circle3 = canvas.circle(15).move(135-15/2, 130-15/2)
-    circle3.fill(color)
-    circle3.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+    function animation(circle, array) {
+        for (var i = 0; i < array.length; i++) {
+            circle.animate({duration: 1000}).move(array[i][0]-15/2, array[i][1]-15/2) 
+        }
+        for (var i = array.length - 1; i >= 0; i--) {
+            circle.animate({duration: 1000}).move(array[i][0]-15/2, array[i][1]-15/2) 
+        }
+    }
 
-    var circle4 = canvas.circle(15).move(155-15/2, 230-15/2)
-    circle4.fill(color)
-    circle4.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+    function generatePath(array) {
+        var path = canvas.path(generateString(array))
+        path.fill('none')
+        path.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+    }
 
-    var circle5 = canvas.circle(15).move(360-15/2, 190-15/2)
-    circle5.fill(color)
-    circle5.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+    function generateString(array) {
+        var string = 'M ' + array[0][0] + ' ' + array[0][1]
+        for (var i = 1; i < array.length; i++) {
+            string += ' ' + array[i][0] + ' ' + array[i][1]
+        }
+        return string
+    }
 
-    var circle6 = canvas.circle(15).move(280-15/2, 220-15/2)
-    circle6.fill(color)
-    circle6.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
-
-    var circle7 = canvas.circle(15).move(340-15/2, 240-15/2)
-    circle7.fill(color)
-    circle7.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
-
-    var path1 = canvas.path('M 60 310 L 60 130 L 100 100 L 280 100 L 280 55 L 325 10 L 410 10')
-    path1.fill('none')
-    path1.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
-
-    var path2 = canvas.path('M 60 310 L 60 260 L 10 200 L 10 110')
-    path2.fill('none')
-    path2.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
-
-    var path3 = canvas.path('M 105 310 L 105 160 L 135 130')
-    path3.fill('none')
-    path3.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
-
-    var path4 = canvas.path('M 185 310 L 185 280 L 155 260 L 155 180 L 200 140 L 340 140 L 340 70 L 410 70')
-    path4.fill('none')
-    path4.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
-    
-    var path5 = canvas.path('M 230 310 L 230 190 L 360 190 L 410 230')
-    path5.fill('none')
-    path5.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
-
-    var path6 = canvas.path('M 230 310 L 230 280 L 280 220')
-    path6.fill('none')
-    path6.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
-
-    var path7 = canvas.path('M 305 310 L 305 270 L 340 240 L 340 310')
-    path7.fill('none')
-    path7.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
-    
-    // Every 100ms we decide if we want to create
-    // a new star and after which time
-    setInterval(() => {
-      if (Math.random() < 0.7) {
-        setTimeout(() => {
-          //TODO: move circles along lines
-        }, Math.random() * 1000)
-      }
-    }, 100)
-    
+    function generateCircle(array) {
+        var circle = canvas.circle(circlesize).move(array[0][0]-circlesize/2, array[0][1]-circlesize/2)
+        circle.fill(color)
+        circle.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+        return circle
+    }
 }
