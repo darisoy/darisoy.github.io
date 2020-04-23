@@ -1,1 +1,65 @@
-function(a){"use strict";window.Toc={helpers:{findOrFilter:function(e,t){var n=e.find(t);return e.filter(t).add(n).filter(":not([data-toc-skip])")},generateUniqueIdBase:function(e){return a(e).text().trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,64).replace(/^-+|-+$/gm,"").toLowerCase()||e.tagName.toLowerCase()},generateUniqueId:function(e){for(var t=this.generateUniqueIdBase(e),n=0;;n++){var r=t;if(0<n&&(r+="-"+n),!document.getElementById(r))return r}},generateAnchor:function(e){if(e.id)return e.id;var t=this.generateUniqueId(e);return e.id=t},createNavList:function(){return a('<ul class="nav navbar-nav"></ul>')},createChildNavList:function(e){var t=this.createNavList();return e.append(t),t},generateNavEl:function(e,t){var n=a('<a class="nav-link"></a>');n.attr("href","#"+e),n.text(t);var r=a("<li></li>");return r.append(n),r},generateNavItem:function(e){var t=this.generateAnchor(e),n=a(e),r=n.data("toc-text")||n.text();return this.generateNavEl(t,r)},getTopLevel:function(e){for(var t=1;t<=6;t++){if(1<this.findOrFilter(e,"h"+t).length)return t}return 1},getHeadings:function(e,t){var n="h"+t,r="h"+(t+1);return this.findOrFilter(e,n+","+r)},getNavLevel:function(e){return parseInt(e.tagName.charAt(1),10)},populateNav:function(r,a,e){var i,s=r,c=this;e.each(function(e,t){var n=c.generateNavItem(t);c.getNavLevel(t)===a?s=r:i&&s===r&&(s=c.createChildNavList(i)),s.append(n),i=n})},parseOps:function(e){var t;return(t=e.jquery?{$nav:e}:e).$scope=t.$scope||a(document.body),t}},init:function(e){(e=this.helpers.parseOps(e)).$nav.attr("data-toggle","toc");var t=this.helpers.createChildNavList(e.$nav),n=this.helpers.getTopLevel(e.$scope),r=this.helpers.getHeadings(e.$scope,n);this.helpers.populateNav(t,n,r)}},a(function(){a('nav[data-toggle="toc"]').each(function(e,t){var n=a(t);Toc.init(n)})})}(jQuery);
+{
+    const width = window.innerWidth
+    const height = window.innerHeight-10
+    
+    const canvas = SVG().addTo('svg')
+    const color = '#ffffff'
+    const w = 7
+
+    var circle1 = canvas.circle(15).move(10-15/2, 110-15/2)
+    circle1.fill(color)
+    circle1.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var circle2 = canvas.circle(15).move(200-15/2, 100-15/2)
+    circle2.fill(color)
+    circle2.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var circle3 = canvas.circle(15).move(135-15/2, 130-15/2)
+    circle3.fill(color)
+    circle3.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var circle4 = canvas.circle(15).move(155-15/2, 230-15/2)
+    circle4.fill(color)
+    circle4.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var circle5 = canvas.circle(15).move(360-15/2, 190-15/2)
+    circle5.fill(color)
+    circle5.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var circle6 = canvas.circle(15).move(280-15/2, 220-15/2)
+    circle6.fill(color)
+    circle6.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var circle7 = canvas.circle(15).move(340-15/2, 240-15/2)
+    circle7.fill(color)
+    circle7.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var path1 = canvas.path('M 60 310 L 60 130 L 100 100 L 280 100 L 280 55 L 325 10 L 410 10')
+    path1.fill('none')
+    path1.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var path2 = canvas.path('M 60 310 L 60 260 L 10 200 L 10 110')
+    path2.fill('none')
+    path2.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var path3 = canvas.path('M 105 310 L 105 160 L 135 130')
+    path3.fill('none')
+    path3.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var path4 = canvas.path('M 185 310 L 185 280 L 155 260 L 155 180 L 200 140 L 340 140 L 340 70 L 410 70')
+    path4.fill('none')
+    path4.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+    
+    var path5 = canvas.path('M 230 310 L 230 190 L 360 190 L 410 230')
+    path5.fill('none')
+    path5.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var path6 = canvas.path('M 230 310 L 230 280 L 280 220')
+    path6.fill('none')
+    path6.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+
+    var path7 = canvas.path('M 305 310 L 305 270 L 340 240 L 340 310')
+    path7.fill('none')
+    path7.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
+    
+}

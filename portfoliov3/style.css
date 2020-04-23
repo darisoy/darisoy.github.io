@@ -26,11 +26,11 @@ h2 {
 
 .border {
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 13.5%;
   width: 73%;
   bottom: 25%;
-  background-color: inherit;
+  background-color: transparent;
 }
 
 #doruk {
@@ -304,4 +304,13 @@ nav[data-toggle=toc] .nav .nav>li>.active:hover {
 }
 nav[data-toggle=toc] .nav-link.active+ul {
   display:block
+}
+
+svg {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+  height: 310px;
+  width: 410px;
+  background-color: transparent;
 }
