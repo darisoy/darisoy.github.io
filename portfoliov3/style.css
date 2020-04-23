@@ -313,4 +313,5 @@ svg {
   height: 310px;
   width: 410px;
   background-color: transparent;
+  z-index: -1;
 }

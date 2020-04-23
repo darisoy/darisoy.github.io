@@ -62,4 +62,14 @@
     path7.fill('none')
     path7.stroke({ color: color, width: w, linecap: 'round', linejoin: 'round' })
     
+    // Every 100ms we decide if we want to create
+    // a new star and after which time
+    setInterval(() => {
+      if (Math.random() < 0.7) {
+        setTimeout(() => {
+          //TODO: move circles along lines
+        }, Math.random() * 1000)
+      }
+    }, 100)
+    
 }
