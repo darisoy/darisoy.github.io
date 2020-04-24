@@ -1,7 +1,4 @@
-{
-    const width = window.innerWidth
-    const height = window.innerHeight-10
-    
+{   
     const canvas = SVG().addTo('svg')
     const color = '#f7f7f7'
     const w = 7
