@@ -6,6 +6,7 @@
     const color = '#f7f7f7'
     const w = 7
     const circlesize = 15
+    const delay = 2000;
 
     animateCircle([[60, 310], [60, 260], [10, 200], [10, 110]])
     animateCircle([[60, 310], [60, 130], [100, 100], [280, 100], [280, 55], [325, 10], [410, 10]])
@@ -20,15 +21,15 @@
         var circle = generateCircle(array)
         setInterval(() => {
             animation(circle, array)
-        }, 100)
+        }, 5000)
     }
 
     function animation(circle, array) {
         for (var i = 0; i < array.length; i++) {
-            circle.animate({duration: 1000}).move(array[i][0]-15/2, array[i][1]-15/2) 
+            circle.animate({duration: delay}).move(array[i][0]-15/2, array[i][1]-15/2) 
         }
         for (var i = array.length - 1; i >= 0; i--) {
-            circle.animate({duration: 1000}).move(array[i][0]-15/2, array[i][1]-15/2) 
+            circle.animate({duration: delay}).move(array[i][0]-15/2, array[i][1]-15/2) 
         }
     }
 

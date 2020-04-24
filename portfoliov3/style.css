@@ -314,4 +314,5 @@ svg {
   width: 410px;
   background-color: transparent;
   z-index: -1;
+  transform: translate3d(0, 0, 0);
 }
