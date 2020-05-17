@@ -1,0 +1,297 @@
+:root {
+  --font-family: 'Open Sans';
+  --background-grey: #e7e7e7;
+  --font-dark-grey: rgb(119, 119, 119);
+  --u-red: #B71B1B;
+  --button-hover-red: rgb(143, 19, 19);
+  --button-shadow: rgba(0, 0, 0, 0.3);
+  --font-white: #eaeaea;
+  --backgroung-proj-grey: #c5c5c5;
+  --color-resume: #e9848d;
+  --color-linkedin: #6fa0f5;
+  --color-github: #f59753;
+  --color-projects: #95c46f;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 28px;
+  background-color: var(--background-grey);
+  color: var(--font-dark-grey);
+}
+
+.border {
+  position: absolute;
+  top: 15%;
+  left: 13.5%;
+  width: 73%;
+  bottom: 25%;
+  background-color: transparent;
+}
+
+/* project titles for navigation bar */
+h1 {
+  font-family: var(--font-family);
+  font-size: 40px;
+  font-weight:normal;
+  padding-top: 70px;
+  position: relative;
+  text-decoration: none;
+}
+
+h2 {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight:normal;
+  padding-top: 50px;
+  margin-bottom: 10px;
+  position: relative;
+  text-decoration: none;
+}
+
+/* page title */
+
+#doruk {
+  font-size: 70px;
+  color: inherit;
+}
+
+#u {
+  color: var(--u-red);
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+#doruk:hover #u {
+  color: var(--font-white);
+  background-color: var(--u-red);
+  -webkit-animation: fade 0.7s;
+  animation: fade 0.7s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fade {
+  0% {color:var(--u-red); background-color: transparent;}
+  100% {color: var(--font-white); background-color: var(--u-red);}
+}
+@keyframes fade {
+  0% {color: var(--u-red); background-color: transparent;}
+  100% {color: var(--font-white); background-color: var(--u-red);}
+}
+
+.nav-col {
+  position: fixed;
+  float: left;
+}
+
+.box {
+  position: relative;
+  top: 0px;
+  left: 870px;
+  width: 920px;
+  transform: translateX(-50%);
+  float: left;
+}
+
+.box-header {
+  margin-bottom: 10px;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* home page links */
+.link {
+  margin-bottom: 10px;
+  position: relative;
+  text-decoration: none;
+  top: 55px;
+  color: inherit;
+  left: 12px;
+}
+
+#link1, #link2, #link3, #link4 {
+  text-decoration: none;
+  color: inherit;
+}
+
+#link1:hover{
+  color: var(--color-resume);
+  -webkit-animation: fade1 0.3s;
+  animation: fade1 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+@-webkit-keyframes fade1 {
+  0% {color: inherit;}
+  100% {color: var(--color-resume);}
+}
+@keyframes fade1 {
+  0% {color: inherit;}
+  100% {color: var(--color-resume);}
+}
+
+#link2:hover{
+  color: var(--color-linkedin);
+  -webkit-animation: fade2 0.3s;
+  animation: fade2 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+@-webkit-keyframes fade2 {
+  0% {  color: inherit;}
+  100% {color: var(--color-linkedin);}
+}
+@keyframes fade2 {
+  0% {  color: inherit;}
+  100% {color: var(--color-linkedin);}
+}
+
+#link3:hover{
+  color: var(--color-github);
+  -webkit-animation: fade3 0.3s;
+  animation: fade3 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+@-webkit-keyframes fade3 {
+  0% {  color: inherit;}
+  100% {color: var(--color-github);}
+}
+@keyframes fade3 {
+  0% {  color: inherit;}
+  100% {color: var(--color-github);}
+}
+
+#link4:hover{
+  color: var(--color-projects);
+  -webkit-animation: fade4 0.3s;
+  animation: fade4 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+@-webkit-keyframes fade4 {
+  0% {color: inherit;}
+  100% {color: var(--color-projects);}
+}
+@keyframes fade4 {
+  0% {color: inherit;}
+  100% {color: var(--color-projects);}
+}
+
+/* project frame */
+.proj {
+  position: relative;
+  background-color: var(--backgroung-proj-grey);
+  text-align: center;
+  width: 95%;
+  left: 0%;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  box-shadow:  16px 16px 32px #a7a7a7, 
+             -16px -16px 32px #e3e3e3;
+}
+
+object {
+  border-radius: 10px;
+}
+
+/* button design */
+#button {
+  position: absolute;
+  text-decoration: none;
+  color: var(--font-white);
+  bottom: 1%;
+  width: 100px;
+  background: var(--u-red);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+#button:hover {
+  box-shadow: 0 3px 2px var(--button-shadow);
+  background-color: var(--button-hover-red);
+}
+
+#button:active {
+  bottom: 0.5%;
+  box-shadow: 0 1px 2px var(--button-shadow);
+  background-color: var(--button-hover-red);
+}
+
+/* navigation bar for projects page */
+nav[data-toggle="toc"] {
+  top: 42px;
+  text-decoration: none;
+}
+
+li, a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+nav[data-toggle=toc] .nav > li > a {
+  display:block;
+  padding:4px 10px;
+  font-size: 20px;
+  font-weight:500;
+  color: inherit;
+  text-decoration:none;
+}
+
+nav[data-toggle=toc] .nav>li>a:focus,
+nav[data-toggle=toc] .nav>li>a:hover {
+  padding-left:9px;
+  color:var(--u-red);
+  text-decoration:none;
+  background-color:transparent;
+}
+nav[data-toggle=toc] .nav-link.active,
+nav[data-toggle=toc] .nav-link.active:focus,
+nav[data-toggle=toc] .nav-link.active:hover {
+  padding-left:8px;
+  font-weight:700;
+  color:var(--u-red);
+  background-color:transparent;
+}
+  
+nav[data-toggle=toc] .nav-link + ul {
+  display:none;
+  padding-bottom:10px
+}
+
+nav[data-toggle=toc] .nav .nav>li>a {
+  padding-top:1px;
+  padding-bottom:1px;
+  padding-left:10px;
+  font-size:15px;
+  font-weight:400
+}
+
+nav[data-toggle=toc] .nav .nav>li>a:focus,
+nav[data-toggle=toc] .nav .nav>li>a:hover {
+  padding-left:9px
+}
+
+nav[data-toggle=toc] .nav .nav>li>.active,
+nav[data-toggle=toc] .nav .nav>li>.active:focus,
+nav[data-toggle=toc] .nav .nav>li>.active:hover {
+  padding-left:8px;
+  font-weight:500
+}
+nav[data-toggle=toc] .nav-link.active+ul {
+  display:block
+}
+
+svg {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+  height: 310px;
+  width: 410px;
+  background-color: transparent;
+  z-index: -1;
+  transform: translate3d(0, 0, 0);
+}
