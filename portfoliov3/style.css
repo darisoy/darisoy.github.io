@@ -5,12 +5,15 @@
   --u-red: #B71B1B;
   --button-hover-red: rgb(143, 19, 19);
   --button-shadow: rgba(0, 0, 0, 0.3);
+  --formbutton-hover-red: rgb(143, 19, 19);
+  --formbutton-shadow: rgba(0, 0, 0, 0.3);
   --font-white: #eaeaea;
   --backgroung-proj-grey: #c5c5c5;
   --color-resume: #e9848d;
   --color-linkedin: #6fa0f5;
   --color-github: #f59753;
   --color-projects: #95c46f;
+  --color-contact: #d4c156;
 }
 
 body {
@@ -111,7 +114,7 @@ h2 {
   left: 12px;
 }
 
-#link1, #link2, #link3, #link4 {
+#link1, #link2, #link3, #link4, #link5 {
   text-decoration: none;
   color: inherit;
 }
@@ -180,6 +183,22 @@ h2 {
   100% {color: var(--color-projects);}
 }
 
+#link5:hover{
+  color: var(--color-contact);
+  -webkit-animation: fade5 0.3s;
+  animation: fade5 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+@-webkit-keyframes fade5 {
+  0% {color: inherit;}
+  100% {color: var(--color-contact);}
+}
+@keyframes fade5 {
+  0% {color: inherit;}
+  100% {color: var(--color-contact);}
+}
+
 /* project frame */
 .proj {
   position: relative;
@@ -219,6 +238,29 @@ object {
   bottom: 0.5%;
   box-shadow: 0 1px 2px var(--button-shadow);
   background-color: var(--button-hover-red);
+}
+
+input[type=submit] {
+  position: relative;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--font-white);
+  width: 100px;
+  background: var(--u-red);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+input[type=submit]:hover {
+  box-shadow: 0 3px 2px var(--formbutton-shadow);
+  background-color: var(--formbutton-hover-red);
+}
+
+input[type=submit]:active {
+  bottom: 0.5%;
+  box-shadow: 0 1px 2px var(--formbutton-shadow);
+  background-color: var(--formbutton-hover-red);
 }
 
 /* navigation bar for projects page */
@@ -294,4 +336,52 @@ svg {
   background-color: transparent;
   z-index: -1;
   transform: translate3d(0, 0, 0);
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-family: var(--font-family);
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid;
+  border-bottom: 2px solid var(--font-dark-grey);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+}
+
+textarea{
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 14px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 0px solid;
+  border-bottom: 2px solid var(--font-dark-grey);
+  margin-bottom: 1px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  min-height: 200px;
+  resize: none;
+}
+
+input[type=text]:focus, textarea:focus {
+  border-bottom: 3px solid var(--u-red);
+  margin-bottom: 0px;
+  -webkit-animation: selection 0.3s;
+  animation: selection 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+@-webkit-keyframes selection {
+  0% {border-bottom: 3px solid var(--font-dark-grey)}
+  100% {border-bottom: 3px solid var(--u-red)}
+}
+@keyframes selection {
+  0% {border-bottom: 3px solid var(--font-dark-grey)}
+  100% {border-bottom: 3px solid var(--u-red)}
 }
