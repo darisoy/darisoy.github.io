@@ -57,6 +57,7 @@ h2 {
 #doruk {
   font-size: 70px;
   color: inherit;
+  width: fit-content;
 }
 
 #u {
