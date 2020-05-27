@@ -242,8 +242,8 @@ object {
 }
 
 input[type=submit] {
-  position: relative;
-  font-size: 15px;
+  position: absolute;
+  font-size: 20px;
   text-decoration: none;
   color: var(--font-white);
   width: 100px;
@@ -251,6 +251,8 @@ input[type=submit] {
   margin: 5px;
   padding: 5px;
   border-radius: 8px;
+  border: none;
+  bottom: 2%;
 }
 
 input[type=submit]:hover {
@@ -259,7 +261,7 @@ input[type=submit]:hover {
 }
 
 input[type=submit]:active {
-  bottom: 0.5%;
+  bottom: 1.5%;
   box-shadow: 0 1px 2px var(--formbutton-shadow);
   background-color: var(--formbutton-hover-red);
 }
@@ -351,6 +353,7 @@ input[type=text] {
   border-radius: 4px;
   box-sizing: border-box;
   margin-bottom: 1px;
+  background-color: var(--font-white);
 }
 
 textarea{
@@ -367,6 +370,7 @@ textarea{
   font-family: var(--font-family);
   min-height: 200px;
   resize: none;
+  background-color: var(--font-white);
 }
 
 input[type=text]:focus, textarea:focus {
@@ -376,13 +380,14 @@ input[type=text]:focus, textarea:focus {
   animation: selection 0.3s;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  background-color: white;
 }
 
 @-webkit-keyframes selection {
-  0% {border-bottom: 3px solid var(--font-dark-grey)}
-  100% {border-bottom: 3px solid var(--u-red)}
+  0% {border-bottom: 3px solid var(--font-dark-grey); background-color: var(--font-white);}
+  100% {border-bottom: 3px solid var(--u-red); background-color: white;}
 }
 @keyframes selection {
-  0% {border-bottom: 3px solid var(--font-dark-grey)}
-  100% {border-bottom: 3px solid var(--u-red)}
+  0% {border-bottom: 3px solid var(--font-dark-grey); background-color: var(--font-white);}
+  100% {border-bottom: 3px solid var(--u-red); background-color: white;}
 }
