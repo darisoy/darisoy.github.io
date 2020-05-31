@@ -92,10 +92,17 @@ h2 {
 .box {
   position: relative;
   top: 0px;
-  left: 870px;
+  /* left: 870px; */
+  left: 50%;
   width: 920px;
   transform: translateX(-50%);
   float: left;
+}
+
+@media all and (max-width: 1580px) {
+  .box{
+      left: 870px;
+  }
 }
 
 .box-header {
