@@ -18,7 +18,7 @@ body {
 }
 
 input[type=url] {
-    width: 200px;
+    width: 150px;
     font-size: 12px;
     margin: 8px 0;
     display: inline-block;
