@@ -3,13 +3,24 @@
         document.getElementById("imageURL").value = '';
     }
 
+    function startImage() {
+        document.getElementById("imageURL").value = 'https://media-exp1.licdn.com/dms/image/C5616AQGon86seO4PSA/profile-displaybackgroundimage-shrink_200_800/0?e=1596672000&v=beta&t=rsgfbF4HKK09jNoTjQA6dpQibjMpZJFFaB-59a_Rfug';
+        newImage();
+    }
+
     var imageObj = new Image();
     imageObj.crossOrigin = "anonymous";
     function newImage() {
-        imageObj.src = document.getElementById("imageURL").value;
-        imageObj.onload = function() {
-            drawImage(this);
-        };
+        var url = document.getElementById("imageURL").value;
+        if (validURL(url)) {
+            document.getElementById("original").src = url;
+            imageObj.src = url;
+            imageObj.onload = function() {
+                drawImage(this);
+            };
+        } else {
+            alert("Please enter a valid URL");
+        }
     }
     
     function drawImage(imageObj) {
@@ -20,7 +31,7 @@
         var imageWidth = imageObj.width;
         var imageHeight = imageObj.height;
         context.canvas.width = imageWidth;
-        context.canvas.height = imageHeight * 2;
+        context.canvas.height = imageHeight;
 
         context.drawImage(imageObj, imageX, imageY);
 
@@ -46,7 +57,7 @@
             }
         }
         imageData.data.set(im.data);
-        context.putImageData(imageData, imageX, imageY+imageHeight);
+        context.putImageData(imageData, imageX, imageY);
     }
 
     function sobel_image(im) {
@@ -197,6 +208,16 @@
         this.h = h;
         this.c = c;
         this.data = new Array(this.w * this.h * this.c);
+    }
+
+    function validURL(str) {
+        var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+            '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+            '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+            '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+            '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+            '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+        return !!pattern.test(str);
     }
 
 }
