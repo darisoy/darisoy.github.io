@@ -6,7 +6,7 @@ body {
 #myCanvas {
     background-color: black;
     left: 50%;
-    top: 70px;
+    top: 100px;
     position: absolute;
     transform: translateX(-50%);
 }
@@ -18,7 +18,7 @@ body {
 }
 
 input[type=url] {
-    width: 50px;
+    width: 200px;
     font-size: 12px;
     margin: 8px 0;
     display: inline-block;
