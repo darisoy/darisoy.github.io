@@ -16,14 +16,16 @@
             document.getElementById("original").src = url;
             imageObj.src = url;
             imageObj.onload = function() {
-                drawImage(this);
+                edgeDetect(this);
             };
         } else {
             alert("Please enter a valid URL");
         }
     }
+
+    //TODO: add other filters
     
-    function drawImage(imageObj) {
+    function edgeDetect(imageObj) {
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext('2d');
         var imageX = 0;
