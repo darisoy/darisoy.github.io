@@ -8,25 +8,29 @@
         newImage();
     }
 
-    var imageObj = new Image();
-    imageObj.crossOrigin = "anonymous";
+    var edgeObject = new Image();
+    edgeObject.crossOrigin = "anonymous";
+    var colorEdgeObject = new Image();
+    colorEdgeObject.crossOrigin = "anonymous";
     function newImage() {
         var url = document.getElementById("imageURL").value;
         if (validURL(url)) {
             document.getElementById("original").src = url;
-            imageObj.src = url;
-            imageObj.onload = function() {
+            edgeObject.src = url;
+            edgeObject.onload = function() {
                 edgeDetect(this);
+            };
+            colorEdgeObject.src = url;
+            colorEdgeObject.onload = function() {
+                colorfulEdges(this);
             };
         } else {
             alert("Please enter a valid URL");
         }
     }
 
-    //TODO: add other filters
-    
     function edgeDetect(imageObj) {
-        var canvas = document.getElementById('myCanvas');
+        var canvas = document.getElementById('edgeCanvas');
         var context = canvas.getContext('2d');
         var imageX = 0;
         var imageY = 0;
@@ -58,8 +62,64 @@
               setPixel(im, x, y, 3, Math.floor(getPixel(filtered, x, y, 0)*255.0));
             }
         }
+
         imageData.data.set(im.data);
         context.putImageData(imageData, imageX, imageY);
+    }
+
+    function colorfulEdges(imageObj) {
+        var canvas = document.getElementById('colorizedEdgeCanvas');
+        var context = canvas.getContext('2d');
+        var imageX = 0;
+        var imageY = 0;
+        var imageWidth = imageObj.width;
+        var imageHeight = imageObj.height;
+        context.canvas.width = imageWidth;
+        context.canvas.height = imageHeight;
+
+        context.drawImage(imageObj, imageX, imageY);
+
+        //get image data
+        var imageData = context.getImageData(imageX, imageY, imageWidth, imageHeight);
+        var im = new Picture(imageWidth, imageHeight, 4);
+        var data = imageData.data;
+        for (var y = 0; y < imageHeight; y++) {
+          for (var x = 0; x < imageWidth; x++) {
+            setPixel(im, x, y, 0, data[((im.w * y) + x) * im.c + 0]/255.0);
+            setPixel(im, x, y, 1, data[((im.w * y) + x) * im.c + 1]/255.0);
+            setPixel(im, x, y, 2, data[((im.w * y) + x) * im.c + 2]/255.0);
+          }
+        }
+        
+        var filtered = colorize_sobel(im);
+        for (var y = 0; y < im.h; y++) {
+            for (var x = 0; x < im.w; x++) {
+              setPixel(im, x, y, 0, Math.floor(getPixel(filtered, x, y, 0)*255.0));
+              setPixel(im, x, y, 1, Math.floor(getPixel(filtered, x, y, 1)*255.0));
+              setPixel(im, x, y, 2, Math.floor(getPixel(filtered, x, y, 2)*255.0));
+              setPixel(im, x, y, 3, 255);
+            }
+        }
+        imageData.data.set(im.data);
+        context.putImageData(imageData, imageX, imageY);
+    }
+
+    function colorize_sobel(im) {
+        var ret = convolve_image(im, make_gaussian_filter(4), true);
+        var sobel = sobel_image(ret);
+        var mag = sobel[0];
+        var phase = sobel[1];
+        mag = feature_normalize(mag);
+        phase = feature_normalize(phase);
+        for (var w = 0; w < im.w; w++) {
+            for (var h = 0; h < im.h; h++) {
+                setPixel(ret, w, h, 0, getPixel(phase, w, h, 0)); //H
+                setPixel(ret, w, h, 1, getPixel(mag, w, h, 0)); //S
+                setPixel(ret, w, h, 2, getPixel(mag, w, h, 0)); //V
+            }
+        }
+        ret = hsv_to_rgb(ret);
+        return ret;
     }
 
     function sobel_image(im) {
@@ -147,6 +207,51 @@
         return im;
     }
 
+    function hsv_to_rgb(im) {
+        for (var w = 0; w < im.w; w++) {
+            for (var h = 0; h < im.h; h++) {
+                var H = getPixel(im, w, h, 0);
+                var S = getPixel(im, w, h, 1);
+                var V = getPixel(im, w, h, 2);
+                var C = V * S;
+                var X = C * (1.0 - Math.abs((6.0*H % 2.0) - 1.0));
+                var m = V - C;
+
+                var Rp, Gp, Bp;
+                if (H >= 0 && H < (1.0/6.0)) {
+                    Rp = C;
+                    Gp = X;
+                    Bp = 0;
+                } else if (H >= (1.0/6.0) && H < (2.0/6.0)) {
+                    Rp = X;
+                    Gp = C;
+                    Bp = 0;
+                } else if (H >= (2.0/6.0) && H < (3.0/6.0)) {
+                    Rp = 0;
+                    Gp = C;
+                    Bp = X;
+                } else if (H >= (3.0/6.0) && H < (4.0/6.0)) {
+                    Rp = 0;
+                    Gp = X;
+                    Bp = C;
+                } else if (H >= (4.0/6.0) && H < (5.0/6.0)) {
+                    Rp = X;
+                    Gp = 0;
+                    Bp = C;
+                } else if (H >= (5.0/6.0) && H < 1) {
+                    Rp = C;
+                    Gp = 0;
+                    Bp = X;
+                }
+                
+                setPixel(im, w, h, 0, Rp + m);
+                setPixel(im, w, h, 1, Gp + m);
+                setPixel(im, w, h, 2, Bp + m);
+            }
+        }
+        return im;
+    }
+
     function make_gx_filter() {
         var image = new Picture(3, 3, 1);
         setPixel(image, 0, 0, 0, -1);
@@ -173,6 +278,25 @@
         setPixel(image, 2, 1, 0, 0);
         setPixel(image, 2, 2, 0, 1);
         return image;
+    }
+
+    function make_gaussian_filter(sigma) {
+        var dimension = Math.round(6*sigma);
+        if (dimension % 2 == 0) {
+            dimension++;
+        }
+        var im = new Picture(dimension, dimension, 1);
+
+        var multiplier = 1.0 / (2.0*Math.PI*Math.pow(sigma, 2));
+        for (var x = 0 ; x < dimension; x++) {
+            for (var y = 0 ; y < dimension; y++) {
+                var newx = x - Math.floor(dimension/2.0);
+                var newy = y - Math.floor(dimension/2.0);
+                var exponent = -1.0 * (Math.pow(newx, 2)+Math.pow(newy, 2)) / (2*Math.pow(sigma, 2));
+                setPixel(im, x, y, 0, multiplier * Math.exp(exponent));
+            }   
+        }
+        return im;
     }
 
     function get_clamped_pixel(im, x, y, ch) {  

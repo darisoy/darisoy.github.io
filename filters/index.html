@@ -18,14 +18,18 @@
             <h>Paste the URL of the image you would like to filter, below.</h>
             <br>
             <h>
-                NOTE: Not all websites allow for images to be copied via url. 
+                NOTE1: Large images might take a few seconds to compute.
+            </h>
+            <br>
+            <h>
+                NOTE2: Not all websites allow for images to be copied via url. 
                 If the url you paste does not work, please try another one. 
                 Here is a list of some known-working image URLs:
             </h>
             <ul>
                 <li>https://raw.githubusercontent.com/holynski/cse576_sp20_hw2/master/data/dog.jpg</li>
                 <li>https://1.bp.blogspot.com/-MAR51Ytd4G4/XoTiHQrVFrI/AAAAAAAAFk8/7G2MyBIRaBUXjTf2RujIMXW1b5tt8GCCQCLcBGAsYHQ/s640/image2.jpg</li>
-                <li>https://cdn.cnn.com/cnnnext/dam/assets/200601145623-23-floyd-protest-0531-washington-dc-large-tease.jpg</li>
+                <li>https://static01.nyt.com/images/2019/05/29/realestate/00skyline-south4/88ce0191bfc249b6aae1b472158cccc4-superJumbo.jpg</li>
             </ul> 
             <br>
             <h>URL:</h>
@@ -42,7 +46,11 @@
             <br>
             <h3>Edge Detecting Filter</h3>
             <br>
-            <canvas id="myCanvas"></canvas>
+            <canvas id="edgeCanvas"></canvas>
+            <br>
+            <h3>Colorized Sobel Filter</h3>
+            <br>
+            <canvas id="colorizedEdgeCanvas"></canvas>
         </div>
     </body>
     <script src="filter.js"></script>
