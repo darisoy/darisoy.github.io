@@ -1,0 +1,20 @@
+body {
+    width: fit-content;
+    height: fit-content;
+}
+
+#myCanvas {
+    background-color: black;
+    left: 50%;
+    top: 50px;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+input[type=url] {
+    width: 300px;
+    font-size: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    margin-bottom: 1px;
+  }
