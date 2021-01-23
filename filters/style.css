@@ -13,11 +13,9 @@ body {
 }
 
 #box {
-    position: absolute;
-    left: 10px;
-    width: 800px;
+    max-width: 1000px;
     padding: 30px;
-    margin-bottom: 30px;
+    margin: auto;
     border-radius: 10px;
     border: 3px solid rgb(0, 126, 0);
     background-color: #e6e6e6;

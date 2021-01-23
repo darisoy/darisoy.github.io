@@ -4,7 +4,7 @@
     }
 
     function startImage() {
-        document.getElementById("imageURL").value = 'https://media-exp1.licdn.com/dms/image/C5616AQGon86seO4PSA/profile-displaybackgroundimage-shrink_200_800/0?e=1596672000&v=beta&t=rsgfbF4HKK09jNoTjQA6dpQibjMpZJFFaB-59a_Rfug';
+        document.getElementById("imageURL").value = 'https://3.imimg.com/data3/NH/WN/MY-4427263/pliers-250x250.jpg';
         newImage();
     }
 
