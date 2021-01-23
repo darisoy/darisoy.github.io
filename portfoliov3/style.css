@@ -32,6 +32,12 @@ body {
   background-color: transparent;
 }
 
+@media only screen and (max-width: 500px) {
+  .border {
+    top: 10%;
+  }
+}
+
 /* project titles for navigation bar */
 h1 {
   font-family: var(--font-family);
@@ -100,7 +106,7 @@ h2 {
 }
 
 @media all and (max-width: 1580px) {
-  .box{
+  .box {
       left: 870px;
   }
 }
@@ -120,6 +126,11 @@ h2 {
   top: 55px;
   color: inherit;
   left: 12px;
+}
+@media only screen and (max-width: 500px) {
+  .link {
+    margin-bottom: 20px;
+  }
 }
 
 #link1, #link2, #link3, #link4, #link5 {
