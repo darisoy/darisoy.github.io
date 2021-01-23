@@ -90,6 +90,10 @@ h2 {
   100% {color: var(--font-white); background-color: var(--u-red);}
 }
 
+.project {
+  display: none
+}
+
 .nav-col {
   position: fixed;
   float: left;
@@ -97,17 +101,31 @@ h2 {
 
 .box {
   position: relative;
-  top: 0px;
-  /* left: 870px; */
-  left: 50%;
-  width: 920px;
-  transform: translateX(-50%);
-  float: left;
+  max-width: 800px;
+  margin: auto;
 }
 
-@media all and (max-width: 1580px) {
+@media only screen and (max-width: 1300px) {
   .box {
-      left: 870px;
+    position: relative;
+    margin-left: 260px;
+    max-width: 800px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .nav-col {
+    display: none;
+  }
+
+  .project {
+    display: block;
+  }
+
+  .box {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
   }
 }
 
@@ -120,7 +138,7 @@ h2 {
 
 /* home page links */
 .link {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   position: relative;
   text-decoration: none;
   top: 55px;
