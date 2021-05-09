@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120383432-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-120383432-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Doruk Arisoy</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navi" data-bs-offset="0" tabindex="0">
+    <div class="container bg-light" style="max-width:800px">
+        <div class="container p-5" id="nav1">
+            <div class="row">
+                <div class="col-5 d-flex align-items-center">
+                    <img alt="Doruk profile photo" src="../resources/doruk.png" class="rounded-circle img-fluid">
+                </div>
+                <div class="col p-5 text-center">
+                    <h1 class="display-4">Doruk Arisoy</h1>
+                    <div class="row">
+                        <div class="col gy-2">
+                            <a class="btn btn-outline-primary" href="https://docs.google.com/document/d/1qhOSy2ndBefpc7ppjVHRqW7cItaYzwTATN4t7rAbGNU/edit?usp=sharing" target="_blank">Resumé</a>
+                        </div>
+                        <div class="col gy-2">
+                            <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/darisoy" target="_blank">LinkedIn</a>
+                        </div>
+                        <div class="col gy-2">
+                            <a class="btn btn-outline-primary" href="https://github.com/darisoy/" target="_blank">GitHub</a>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav id="navi" class="justify-content-center navbar-light bg-light px-3 sticky-top">
+            <ul class="nav nav-tabs nav-fill">
+              <li class="nav-item">
+                <a class="nav-link" href="#nav1">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#nav2">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#nav3" role="button">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#nav4">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#nav5">Recipes</a>
+              </li>
+            </ul>
+        </nav>
+
+        <div class="container p-5" id="nav2">
+            <h1>👋 About Me</h1>
+            <dl class="row">
+                <dt class="col-sm-3">Interests</dt>
+                <dd class="col-sm-9">
+                  <p>Statistical/Machine Learning and Artificial Intelligence</p>
+                  <p>Deep Learning: Computer Vision & Natural Language Processing</p>
+                  <p>Database Management Systems</p>
+                </dd>
+
+                <dt class="col-sm-3">Full time</dt>
+                <dd class="col-sm-9">Software Engineer at Google</dd>
+
+                <dt class="col-sm-3">Education</dt>
+                <dd class="col-sm-9">
+                  <p>UW Seattle, MSEE, Machine Learning</p>
+                  <p>UW Seattle, BSEE, Embedded Systems</p>
+                </dd>
+                
+                <dt class="col-sm-3">Hobbies</dt>
+                <dd class="col-sm-9">Cooking, Basketball, Football</dd>
+              </dl>
+        </div>
+
+        <div class="container p-5" id="nav3">
+            <h1>🚀 Projects</h1>
+
+            <h4 id="nav3ml">Machine Learning</h4>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/bio.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">BIO Tagging</h5>
+                        <p class="card-text">Uses DistilBERT transformer for embeddings and a RNN model for classification to predict word tags in Tweets.</p>
+                        <a href="https://github.com/darisoy/EE517_Sp21/blob/master/hw3/hw3.ipynb" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/cfb.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">College Football Spread Prediction</h5>
+                        <p class="card-text">Tries to predict college football games' spread using various machine learning techniques.</p>
+                        <a href="https://github.com/John-Ragland/ee511_assignments/blob/main/project/final_project_notebook.ipynb" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/dog-cat.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Image Classification</h5>
+                        <p class="card-text">Trains AlexNet from scratch to classify images of dogs and cats.</p>
+                        <a href="https://colab.research.google.com/drive/1faV2CqIkatfKKqInNdoeiW342VJgIzsi#scrollTo=I3AnbVNWkf06" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/perceptron.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">ML Library from Scratch</h5>
+                        <p class="card-text">Implements a neural network library from scratch in C++ with forward, backward propagation and activation functions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="nav3cv">Computer Vision</h4>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/filters.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Image Filtering</h5>
+                        <p class="card-text">Applies sobel filter (edge detection filter) and colorized sobel filter on a given image.</p>
+                        <a href="#" class="card-link" target="_blank">View in New Page</a>
+                        <a href="#" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/panorama.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Panorama</h5>
+                        <p class="card-text">Creates panorama from multiple small images by detecting corners, stitching images using homography, applying different projections.</p>
+                        <a href="https://github.com/darisoy/cse576_sp20_hw5" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="nav3wd">Databases</h4>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/SimpleDB_overview.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">SimpleDB</h5>
+                        <p class="card-text">A database management system build from scratch in Java. Supports SQL and transactions to maintain ACID principles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/azure.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Flight Booking Application</h5>
+                        <p class="card-text">CLI based Java application that is connected to Azure SQL Database to book and search flight data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="nav3wd">Web Design</h4>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/pipeline_editor.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Pipeline Editor</h5>
+                        <p class="card-text">Allows users to create new pipelines, edit or delete existing ones on a Cisco router using AngularJS. This tool helps to visualize the pipeline configurations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/router_controller3.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Router Controller</h5>
+                        <p class="card-text">Website that runs on the router where users can change the VPN tunnel connection and can view the status of the router.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/budget_preview.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Budgeting App</h5>
+                        <p class="card-text">Calculates an individual's monthly budget by tacking income and expenses. Uses cookies to save the budget in browser.</p>
+                        <a href="https://htmlpreview.github.io/?https://github.com/darisoy/Budgety-App/blob/main/index.html" class="card-link" target="_blank">View in New Page</a>
+                        <a href="https://github.com/darisoy/Budgety-App" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/na_preview.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Naturalization Practice Test</h5>
+                        <p class="card-text">Allows quick and easy practice for the US naturalization test with questions from 2018. Shows difficult questions more often and keeps track of already seen questions.</p>
+                        <a href="https://htmlpreview.github.io/?https://github.com/darisoy/NaturalizationPractice/blob/main/index.html" class="card-link" target="_blank">View in New Page</a>
+                        <a href="https://github.com/darisoy/NaturalizationPractice" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/pig_preview.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Pig Game</h5>
+                        <p class="card-text">Web based game played between two players and two die.</p>
+                        <a href="https://htmlpreview.github.io/?https://github.com/darisoy/Pig-Game/blob/main/index.html" class="card-link" target="_blank">View in New Page</a>
+                        <a href="https://github.com/darisoy/Pig-Game" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/old_preview.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Old Portfolio Designs</h5>
+                        <p class="card-text">Change the /v4/ extension on the url to v1, v2 and v3 to view decomissioned protfolio designs.</p>
+                        <a href="https://github.com/darisoy/darisoy.github.io" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/clock_preview.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Minimalist Web Clock</h5>
+                        <p class="card-text">Shows the current clock as the background color in the HEX or RGB form.</p>
+                        <a href="https://htmlpreview.github.io/?https://github.com/darisoy/HEX-RGB-clock/blob/main/index.html" class="card-link" target="_blank">View in New Page</a>
+                        <a href="https://github.com/darisoy/HEX-RGB-clock" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="nav3es">Embedded Systems</h4>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto">
+                        <img src="https://i.ytimg.com/vi/TgOqZ84XcAI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAf38dZpQ04Q44bx9FTbeh_NjcZzg" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Autonomous Fruit Picking Robot Arm</h5>
+                        <p class="card-text">Using Blue-Pill microcontrollers, Raspberry Pi and Intel RealSense camera, this robot arm can autonomously detect and pick strawberries.</p>
+                        <a href="https://youtu.be/TgOqZ84XcAI" class="card-link" target="_blank">Demo Video</a>
+                        <a href="https://github.com/darisoy/HEX-RGB-clock" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/remote_surgery.gif" class="img-fluid" style="max-height: 250px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Remote Surgery System</h5>
+                        <p class="card-text">Uses Arduino Uno, Mega, ESP8266 and a touchscreen attachment to create subsystems that communicate with one another for a remote surgery application.</p>
+                        <a href="https://github.com/darisoy/RemoteSurgerySystem" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="nav3hd">Hardware Design</h4>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/multiplier.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Mux Based Multiplier</h5>
+                        <p class="card-text">Implements logic gate level N-by-N multiplier design using SystemVerilog.</p>
+                        <a href="https://github.com/darisoy/Mux-Based-Multiplier" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/arm-cpu.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">32-bit ARM CPU</h5>
+                        <p class="card-text">Built a 5 stage pipelined ARM CPU using Verilog</p>
+                        <a href="https://github.com/darisoy/ARM_CPU" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/flappy_birds2.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Flappy Birds</h5>
+                        <p class="card-text">Using an 8x8 LED display and Altera DE1_SoC implements the classic flappy birds game using SystemVerilog, with no software.</p>
+                        <a href="https://github.com/darisoy/FlappyBirds" class="card-link" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 id="nav3cn">Computer Networking</h4>
+            <div class="card mb-3 pt-1">
+                <div class="row g-0">
+                    <div class="col-md-4 d-block m-auto text-center">
+                        <img src="../resources/networking.png" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">CCNP Portfolio</h5>
+                        <p class="card-text">Networks built and designed using advanced networking concepts for the CCNA and CCNP certifications.</p>
+                        <a href="https://dorukarisoy.com/resources/DorukArisoyNetworkingPortfolio.pdf" class="card-link" target="_blank">View in new page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container p-5" id="nav4">
+            <h1>📬 Contact</h1>
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd4Wirp7jXTQbC2_U_RIt0tTH9fTx4YmOfwgNKs3opP189f_Q/formResponse">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="email">
+                    <label>Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input name="entry.384989374" class="form-control" id="floatingInput" placeholder="Subject"/>
+                    <label>Subject</label> 
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="entry.1621737363" class="form-control" id="floatingTextarea2" style="height: 200px" placeholder="message"></textarea>
+                    <label>Message</label>
+                </div>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-outline-primary btn-lg">Send</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="container p-5" id="nav5">
+            <h1>🍗 Favorite Recipes</h1>
+            <div class="row">
+                <div class="col-sm-4 d-flex justify-content-center pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/8DCw_eR_iPA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-yYu3kuVXi3E6HF8Kb1w1vRNruQ" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Boeuf Bourguignon Reciper by Andrew Rea</p>
+                            <a href="https://youtu.be/8DCw_eR_iPA" class="card-link" target="_blank">Get the recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/ct4_vsJizG4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLx-3r78z7lPHeuj1f7_nrDUlrtw" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text">Barbacoa by Joshua Weissman</p>
+                            <a href="https://youtu.be/ct4_vsJizG4" class="card-link" target="_blank">Get the recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/ZNl26JTwCjo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDexNgBRm9ZEVm1YhnzBaz3G62g0A" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">French Demi-Glace by Alex Aïnouz</p>
+                            <a href="https://youtu.be/ZNl26JTwCjo" class="card-link" target="_blank">Get the recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 d-flex justify-content-center pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/JViMCRQ4f44/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDFyByOziPUij7aJ8NJ_ls8fyQ-cw" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">Swedish Meatballs by Alex Aïnouz</p>
+                            <a href="https://youtu.be/JViMCRQ4f44" class="card-link" target="_blank">Get the recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/4wORLNNsZc8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBemaPytzcNejHGQO-jci2PVeB3Mw" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">Birria Tacos by Joshua Weissman</p>
+                            <a href="https://youtu.be/4wORLNNsZc8" class="card-link" target="_blank">Get the recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/-mJYyueZfd8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnpfz4-lIlM3xWfHTGtfbZo34GpA" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">Mashed Potatoes by Alex Aïnouz</p>
+                            <a href="https://youtu.be/8DCw_eR_iPA" class="card-link" target="_blank">Get the recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 d-flex justify-content-center pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/cs8OYby6RrA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB2jxmAg8AHNmmtxrNyLRevVnXFdA" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">One-Pot Pastas by Andrew Rea</p>
+                            <a href="https://youtu.be/cs8OYby6RrA" class="card-link" target="_blank">Get the recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/HdSLKZ6LN94/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDfdTLYL67pJu_ewiyZw5kgk87Nvw" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">Homemade Pasta by Andrew Rea</p>
+                            <a href="https://youtu.be/HdSLKZ6LN94" class="card-link" target="_blank">Get the recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-flex justify-content-center pt-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/Yj7VluL7i60/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQixXfYhFRsmampSCdgKKLcdUwKw" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <p class="card-text">Muffuletta by Joshua Weissman</p>
+                            <a href="https://youtu.be/Yj7VluL7i60" class="card-link" target="_blank">Get the recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</body>
+</html>
